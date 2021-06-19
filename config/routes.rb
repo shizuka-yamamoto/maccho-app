@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  get 'targets/index'
+  devise_for :users
   root to: "targets#index"
 end
