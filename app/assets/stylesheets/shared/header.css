@@ -1,0 +1,34 @@
+header {
+  line-height: 60px;
+  padding: 0 60px;
+	background: cornflowerblue;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+.header-title {
+  margin-left: 30px;
+}
+
+.user-nav {
+  display: flex;
+}
+
+.sign-up {
+  padding-right: 20px;
+}
+
+.sign-up a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.sign-in a {
+  text-decoration: none;
+  color: aliceblue;
+}
