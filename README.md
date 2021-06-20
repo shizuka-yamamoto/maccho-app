@@ -18,7 +18,7 @@
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
 | title  | string     | null: false                    |
-| text   | text       | null: false                    |
+| text   | content    | null: false                    |
 | user   | references | null: false, foreign_key: true |
 
 ### Association
