@@ -1,0 +1,17 @@
+
+
+.target-post {
+	height: 1000px;
+  background-color: #f2f2f3;
+  display: flex;
+  justify-content: center;
+	padding-top: 64px;
+}
+
+.target-post h2 {
+	text-align: center;
+}
+
+.text-content {
+	width: 320px;
+}

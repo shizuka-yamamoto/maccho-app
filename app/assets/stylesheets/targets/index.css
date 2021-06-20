@@ -77,14 +77,15 @@ body {
 	padding: 0;
 }
 
-.targets-lists li {
-	padding-bottom: 64px;
+
+.upper-target {
+	display: flex;
 }
 
-.targets-lists img {
-	width: 200px;
-	border-radius: 4px;
+.target-user {
+	padding-right: 30px;
 }
+
 
 @media (min-width: 900px) {
 
