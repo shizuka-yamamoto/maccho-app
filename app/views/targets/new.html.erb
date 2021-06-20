@@ -1,0 +1,14 @@
+<%= render "shared/header" %>
+
+<div class="target-post">
+  <div class="container">
+		<h2>おはようございます！</h2>
+    <h2>今日の目標を立てましょう！</h2>
+    <%= form_with(model: @target, local: true) do |form| %>
+      <%= form.text_area :content, placeholder: "今日の目標は何ですか？", rows: "10", :class => 'text-content' %>
+      <%= form.submit 'Send', :class=>"btn"%>
+    <% end %>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

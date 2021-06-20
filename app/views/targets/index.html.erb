@@ -5,7 +5,8 @@
 		<div class="info">
 			<h1>昨日の自分よりも今日の自分！</h1>
 			<p>自分自身を鍛えるアプリ</p>
-			<a href="" class="btn">ダウンロード</a>
+			<%= link_to("POWER", new_target_path, {class: "btn"}) %>
+			<%# <a href="" class="btn">POWER</a> %>
 		</div>
 		<div class="pic">
 			<%= image_tag 'fitness.png' %>
@@ -56,21 +57,32 @@
 	<h1>最新投稿の一覧</h1>
 
 	<ul>
-		<li>
-			<%= image_tag 'image.png' %>
-			<h2>はなこ：がんばるぞ！！</h2>
-		</li>
+			<% @targets.each do |target|%>
+				<li>
+				<div class="target">
+					<div class="upper-target">
+						<div class="target-user">
+						<!-- 投稿したユーザー名情報を出力する -->
+							<%= target.user.nickname %>
+						</div>
+						
+						<div class="target-date">
+						<!-- 投稿した時刻を出力する -->
+							<%= target.created_at %>
+						</div>
+					</div>
 
-		<li>
-			<%= image_tag 'image.png' %>
-			<h2>じろう：がんばるぞ！！</h2>
-		</li>
-
-		<li>
-			<%= image_tag 'image.png' %>
-			<h2>たろう：がんばるぞ！！</h2>
-		</li>
+					<div class="lower-target">
+						<div class="target-content">
+						<!-- 投稿したメッセージ内容を記述する -->
+							<%= target.content %>
+						</div>
+					</div>
+				</div>
+				</li>
+			<% end %>
 	</ul>
+
 </section>
 
 <%= render "shared/footer" %>
