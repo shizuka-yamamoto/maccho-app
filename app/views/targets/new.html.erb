@@ -4,9 +4,15 @@
   <%# <div class="container"> %>
     <div class="target-post-top">
       <div calss="target-post-right">
-        <p>カウントダウンを５分に設定し、</p>
-        <p>瞑想を始めましょう！</p>
-      </div>
+        <p>Startボタンをクリックして、<br>
+        5分間の瞑想を始めましょう！</p>
+        <div class="timer-box">
+          <div id="timer">05:00.000</div>
+              <div id="min"></div>
+              <div id="sec"></div>
+              <div id="start">Start</div>
+          </div>
+        </div>  
       <div calss="target-post-left">
         <%= image_tag 'meditation.png' %>
       </div>
