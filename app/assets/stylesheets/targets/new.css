@@ -1,0 +1,29 @@
+.target-post {
+	height: 800px;
+	padding-top: 64px;
+}
+
+.target-post-top {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 64px;
+}
+
+.target-post-top p {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.target-post img {
+	width: 160px;
+}
+
+.target-post-bottom {
+	text-align: center;
+}
+
+
+.text-content {
+	width: 320px;
+}
