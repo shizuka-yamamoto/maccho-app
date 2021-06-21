@@ -1,16 +1,28 @@
-
-
 .target-post {
-	height: 1000px;
-  background-color: #f2f2f3;
-  display: flex;
-  justify-content: center;
+	height: 800px;
 	padding-top: 64px;
 }
 
-.target-post h2 {
+.target-post-top {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 64px;
+}
+
+.target-post-top p {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.target-post img {
+	width: 160px;
+}
+
+.target-post-bottom {
 	text-align: center;
 }
+
 
 .text-content {
 	width: 320px;
