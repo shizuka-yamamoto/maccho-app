@@ -19,6 +19,7 @@ body {
 
 .btn {
 	text-decoration: none;
+	cursor: pointer;
 	background: cornflowerblue;
 	color: aliceblue;
 	display: block;
@@ -28,6 +29,16 @@ body {
 	font-size: 14px;
 	font-weight: bold;
 	border-radius: 4px;
+	border: none;
+	border-bottom: solid 3px #627295;
+	padding: 0;
+	transition: .4s;
+}
+
+.btn:active {
+	-webkit-transform: translateY(2px);
+  transform: translateY(2px);
+  border-bottom: none;
 }
 
 .btn:hover {
@@ -39,6 +50,7 @@ body {
 }
 
 .features img {
+	border-radius: 4px;
 	width: 100%;
 }
 
@@ -60,32 +72,53 @@ body {
 	padding-bottom: 64px;
 }
 
-.targets-lists {
+.target-contents {
 	background: cornflowerblue;
+	padding	: 32px;
 }
 
-.targets-lists > h1 {
+.target-contents > h1 {
+	margin: 0;
+	text-align: center;
+}
+
+.target-contents > .subtitle {
 	text-align: center;
 	margin: 0;
-	padding: 64px 0;
+	font-size: 16px;
+	color: #c6e4ff;
+	padding-bottom: 64px;
 }
 
-.targets-lists ul {
+.target-lists {
 	text-align: center;
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
+.target-lists .list {
+	height: 200px;
+	width: 280px;
+	margin-bottom: 64px;
+	margin-left: 10px;
+  background: white;
+  border-left: solid 10px #c6e4ff;
+	color: #232323;
+	font-size: 16px;
+}
 
 .upper-target {
 	display: flex;
 }
 
 .target-user {
-	padding-right: 30px;
+	margin-right: 4px;
 }
 
+.target-content {
+	padding-top: 14px;
+}
 
 @media (min-width: 900px) {
 
@@ -126,8 +159,8 @@ body {
 			 width: calc(50% - 32px);
 		 }
 
-		 .targets-lists ul {
-			 width: 800px;
+		 .target-lists {
+			 width: calc(100% - 200px);
 			 margin: 0 auto;
 			 display: flex;
 			 justify-content: space-between;

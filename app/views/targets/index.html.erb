@@ -5,8 +5,9 @@
 		<div class="info">
 			<h1>昨日の自分よりも今日の自分！</h1>
 			<p>自分自身を鍛えるアプリ</p>
-			<%= link_to("POWER", new_target_path, {class: "btn"}) %>
-			<%# <a href="" class="btn">POWER</a> %>
+		<div class="btn-box">
+			<%= link_to("POWER！", new_target_path, {class: "btn"}) %>
+		</div>
 		</div>
 		<div class="pic">
 			<%= image_tag 'fitness.png' %>
@@ -16,17 +17,18 @@
 
 <%# アプリの特徴 %>
 <section class="features">
-	<h1>すごい特徴</h1>
+	<h1>特徴</h1>
 
 	<div class="container">
 	
 		<section>
 			<div class="pic">
-				<%= image_tag 'morning.png' %>
+				<%= image_tag 'meditation2.png' %>
 			</div>
 			<div class="info">
-				<h1>すごい</h1>
-				<p>とにかくすごい！とにかくすごい！とにかくすごい！とにかくすごい！とにかくすごい！とにかくすごい！とにかくすごい！とにかくすごい！とにかくすごい！とにかくすごい！</p>
+				<h1>5分間の瞑想からスタート！</h1>
+				<p>スタートボタンをクリックすると、5分間の瞑想が始まります。ここでは呼吸に集中して心を整えます。
+				5分間が経過したら今日の目標を言語化し、投稿しましょう！</p>
 			</div>
 		</section>
 
@@ -35,8 +37,8 @@
 				<%= image_tag 'time.png' %>
 			</div>
 			<div class="info">
-				<h1>すごい</h1>
-				<p>とにかくすごい！とにかくすごい！とにかくすごい！とにかくすごい！とにかくすごい！とにかくすごい！とにかくすごい！とにかくすごい！とにかくすごい！とにかくすごい！</p>
+				<h1>メモ書きでモヤモヤを吹っ飛ばそう！</h1>
+				<p>悩んで何も進まない時はメモ書きを始めましょう！用意するのは紙とペンだけ！用意できたらタイマーをセットし、時間の限り描き続けましょう！</p>
 			</div>
 		</section>
 
@@ -46,42 +48,44 @@
 			</div>
 			<div class="info">
 				<h1>すごい</h1>
-				<p>とにかくすごい！とにかくすごい！とにかくすごい！とにかくすごい！とにかくすごい！とにかくすごい！とにかくすごい！とにかくすごい！とにかくすごい！とにかくすごい！</p>
+				<p>マイページには今まで自分が投稿した目標が保存されています。</p>
 			</div>
 		</section>
 		
 	</div>
 </section>
 
-<section class="targets-lists">
-	<h1>最新投稿の一覧</h1>
+<section class="target-contents">
 
-	<ul>
-			<% @targets.each do |target|%>
-				<li>
-				<div class="target">
-					<div class="upper-target">
-						<div class="target-user">
-						<!-- 投稿したユーザー名情報を出力する -->
-							<%= target.user.nickname %>
-						</div>
-						
-						<div class="target-date">
-						<!-- 投稿した時刻を出力する -->
-							<%= target.created_at %>
-						</div>
-					</div>
+		<h1 class='title'>＼ピックアップ／</h1>
+			<div class="subtitle" >
+				新規投稿一覧
+			</div>
 
-					<div class="lower-target">
-						<div class="target-content">
-						<!-- 投稿したメッセージ内容を記述する -->
-							<%= target.content %>
-						</div>
-					</div>
-				</div>
-				</li>
-			<% end %>
-	</ul>
+		<ul class='target-lists'>
+				<% @targets.each do |target|%>
+					<li class='list'>
+							<div class="upper-target">
+								<div class="target-user">
+								<!-- 投稿したユーザー名情報を出力する -->
+									<%= target.user.nickname %>
+								</div>
+								
+								<div class="target-date">
+								<!-- 投稿した時刻を出力する -->
+									<%= target.created_at %>
+								</div>
+							</div>
+
+							<div class="lower-target">
+								<div class="target-content">
+								<!-- 投稿したメッセージ内容を記述する -->
+									<%= target.content %>
+								</div>
+							</div>
+					</li>
+				<% end %>
+		</ul>
 
 </section>
 
