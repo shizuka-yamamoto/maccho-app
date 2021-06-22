@@ -1,0 +1,50 @@
+<%= render "shared/header" %>
+
+<div class="target-page">
+	
+		<div class="top-info">
+			<div class="icon">
+				<%= image_tag 'maccho.png' %>
+			</div>
+			<div class="user-nickname">
+				<%= @target.user.nickname %>
+			</div>
+			<div class="menu-bar">
+				<% if user_signed_in? && @target.user == current_user %>
+				<a href="#">編集</a>／<a href="#">削除</a>
+				<% end %>
+			</div>
+		</div>
+		
+		<div class="middle-info	">
+			<div class="target-content">
+				<%= @target.content %>
+			</div>
+		</div>
+
+		<div class="bottom-info">
+			<div class="target-create-at">
+				<%= @target.created_at.strftime("%H:%M  %Y/%m/%d") %>
+			</div>
+		</div>
+		
+</div>
+
+<div class="target-comment">
+	<% if user_signed_in? %>
+		<%= form_with(model: @target, local: true) do |form| %>
+			<div class="comment-text">
+				<%= form.text_area :text, placeholder: "コメントする", rows: "2" , :class => 'comment-content'%>
+			</div>
+			<div class="comment-send">
+				<%= form.submit "コメントする", :class=>"comment-btn"%>
+			</div>
+		<% end %>
+	<% else %>
+		<strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+	<% end %>
+</div>
+<div class="comments">
+   <h4>＜コメント一覧＞</h4>
+</div>
+
