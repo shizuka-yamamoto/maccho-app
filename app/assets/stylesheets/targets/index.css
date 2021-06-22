@@ -19,6 +19,7 @@ body {
 
 .btn {
 	text-decoration: none;
+	cursor: pointer;
 	background: cornflowerblue;
 	color: aliceblue;
 	display: block;
@@ -28,6 +29,16 @@ body {
 	font-size: 14px;
 	font-weight: bold;
 	border-radius: 4px;
+	border: none;
+	border-bottom: solid 3px #627295;
+	padding: 0;
+	transition: .4s;
+}
+
+.btn:active {
+	-webkit-transform: translateY(2px);
+  transform: translateY(2px);
+  border-bottom: none;
 }
 
 .btn:hover {
