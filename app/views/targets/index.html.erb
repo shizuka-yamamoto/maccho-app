@@ -64,7 +64,8 @@
 
 		<ul class='target-lists'>
 				<% @targets.each do |target|%>
-					<li class='list'>
+					<li>
+						<div class='list'>
 							<div class="upper-target">
 								<div class="target-user">
 								<!-- 投稿したユーザー名情報を出力する -->
@@ -83,8 +84,16 @@
 									<%= target.content %>
 								</div>
 							</div>
+						</div>
+						<div class="target-comment-link">
+							<%= link_to target_path(target) do %>
+								<%= image_tag "comment.png" %>
+									コメントする
+							<% end %>
+						</div>
 					</li>
 				<% end %>
+
 		</ul>
 
 </section>

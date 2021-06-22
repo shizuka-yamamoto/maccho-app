@@ -95,17 +95,25 @@ body {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	display: flex;
 }
 
 .target-lists .list {
 	height: 200px;
 	width: 280px;
-	margin-bottom: 64px;
+	margin-bottom: 14px;
 	margin-left: 10px;
   background: white;
   border-left: solid 10px #c6e4ff;
-	color: #232323;
 	font-size: 16px;
+}
+
+.list-content {
+	display: block;
+	height: 100%;
+	width: 100%;
+	text-decoration: none;
+	color: #232323;
 }
 
 .upper-target {
@@ -119,6 +127,7 @@ body {
 .target-content {
 	padding-top: 14px;
 }
+
 
 @media (min-width: 900px) {
 
