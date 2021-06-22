@@ -6,7 +6,7 @@
 			<h1>昨日の自分よりも今日の自分！</h1>
 			<p>自分自身を鍛えるアプリ</p>
 		<div class="btn-box">
-			<%= link_to("POWER", new_target_path, {class: "btn"}) %>
+			<%= link_to("POWER！", new_target_path, {class: "btn"}) %>
 		</div>
 		</div>
 		<div class="pic">
@@ -55,35 +55,37 @@
 	</div>
 </section>
 
-<section class="targets-lists">
-	<h1>最新投稿の一覧</h1>
+<section class="target-contents">
 
-	<ul>
-			<% @targets.each do |target|%>
-				<li>
-				<div class="target">
-					<div class="upper-target">
-						<div class="target-user">
-						<!-- 投稿したユーザー名情報を出力する -->
-							<%= target.user.nickname %>
-						</div>
-						
-						<div class="target-date">
-						<!-- 投稿した時刻を出力する -->
-							<%= target.created_at %>
-						</div>
-					</div>
+		<h1 class='title'>＼ピックアップ／</h1>
+			<div class="subtitle" >
+				新規投稿一覧
+			</div>
 
-					<div class="lower-target">
-						<div class="target-content">
-						<!-- 投稿したメッセージ内容を記述する -->
-							<%= target.content %>
-						</div>
-					</div>
-				</div>
-				</li>
-			<% end %>
-	</ul>
+		<ul class='target-lists'>
+				<% @targets.each do |target|%>
+					<li class='list'>
+							<div class="upper-target">
+								<div class="target-user">
+								<!-- 投稿したユーザー名情報を出力する -->
+									<%= target.user.nickname %>
+								</div>
+								
+								<div class="target-date">
+								<!-- 投稿した時刻を出力する -->
+									<%= target.created_at %>
+								</div>
+							</div>
+
+							<div class="lower-target">
+								<div class="target-content">
+								<!-- 投稿したメッセージ内容を記述する -->
+									<%= target.content %>
+								</div>
+							</div>
+					</li>
+				<% end %>
+		</ul>
 
 </section>
 
