@@ -57,35 +57,40 @@
 
 <section class="target-contents">
 
-		<h1 class='title'>＼ピックアップ／</h1>
-			<div class="subtitle" >
-				新規投稿一覧
-			</div>
+	<h1 class='title'>＼最近の投稿一覧／</h1>
+	<div class="subtitle" >
+		コメントして応援することができます！
+	</div>
 
-		<ul class='target-lists'>
-				<% @targets.each do |target|%>
-					<li class='list'>
-							<div class="upper-target">
-								<div class="target-user">
+	<ul class='target-lists'>
+		<% @targets.each do |target|%>
+			<li>
+				<%= link_to target_path(target) do %>
+					<div class='list'>
+
+						<div class="upper-target">
+							<div class="target-user">
 								<!-- 投稿したユーザー名情報を出力する -->
-									<%= target.user.nickname %>
-								</div>
-								
-								<div class="target-date">
+								<%= target.user.nickname %>
+							</div>
+							
+							<div class="target-date">
 								<!-- 投稿した時刻を出力する -->
-									<%= target.created_at %>
-								</div>
+								<%= target.created_at.strftime("%H:%M  %Y/%m/%d") %>
 							</div>
+						</div>
 
-							<div class="lower-target">
-								<div class="target-content">
+						<div class="lower-target">
+							<div class="target-content">
 								<!-- 投稿したメッセージ内容を記述する -->
-									<%= target.content %>
-								</div>
+								<%= target.content %>
 							</div>
-					</li>
+						</div>
+					</div>
 				<% end %>
-		</ul>
+			</li>
+		<% end %>
+	</ul>
 
 </section>
 

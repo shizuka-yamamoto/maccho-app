@@ -16,6 +16,10 @@ class TargetsController < ApplicationController
     end
   end
 
+  def show
+    @target = Target.find(params[:id])
+  end
+
   private
   def target_params
     params.require(:target).permit(:content).merge(user_id: current_user)
