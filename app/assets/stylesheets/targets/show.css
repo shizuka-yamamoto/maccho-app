@@ -4,7 +4,7 @@
   margin: 60px auto;
   padding: 15px;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 6px solid #ddd;
   border-radius: 5px;
 	position: relative;
 }
@@ -36,7 +36,11 @@
 }
 
 .target-comment {
-	text-align: center;
+	margin: 0 auto;
+	width: 580px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 24px;
 }
 
 .target-create-at {
@@ -45,7 +49,7 @@
 }
 
 .comment-content {
-	width: 600px;
+	width: 550px;
 	border: 1px solid #ddd;
 	border-radius: 8px;
 }
@@ -58,7 +62,7 @@
 		display: block;
 		width: 120px;
 		line-height: 28px;
-		margin: 40px auto 48px;
+		margin: 15px auto 15px;
 		font-size: 14px;
 		border-radius: 10px;
 		border: none;
@@ -73,6 +77,3 @@
   border-bottom: none;
 }
 
-.comments {
-	text-align: center;
-}
