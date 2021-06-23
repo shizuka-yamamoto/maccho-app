@@ -1,13 +1,11 @@
-<%= render "shared/header" %>
-
-<div class="main">
+<div class="top-wrapper">
 	<div class="container">
 		<div class="info">
 			<h1>昨日の自分よりも今日の自分！</h1>
 			<p>自分自身を鍛えるアプリ</p>
-		<div class="btn-box">
-			<%= link_to("POWER！", new_target_path, {class: "btn"}) %>
-		</div>
+			<div class="btn-box">
+				<%= link_to("POWER！", new_target_path, {class: "btn"}) %>
+			</div>
 		</div>
 		<div class="pic">
 			<%= image_tag 'fitness.png' %>
@@ -17,7 +15,7 @@
 
 <%# アプリの特徴 %>
 <section class="features">
-	<h1>特徴</h1>
+	<h1>Maccho APPの特徴</h1>
 
 	<div class="container">
 	
@@ -55,20 +53,17 @@
 	</div>
 </section>
 
-<section class="target-contents">
+<section class="targets-wrapper">
 
 	<h1 class='title'>＼最近の投稿一覧／</h1>
-	<div class="subtitle" >
-		コメントして応援することができます！
-	</div>
+	<p>コメントして応援することができます！</p>
 
-	<ul class='target-lists'>
+	<ul class='targets-lists'>
 		<% @targets.each do |target|%>
 			<li>
-				<%= link_to target_path(target) do %>
-					<div class='list'>
+				<%= link_to target_path(target), class: 'target-link' do %>
 
-						<div class="upper-target">
+						<div class="target-info">
 							<div class="target-user">
 								<!-- 投稿したユーザー名情報を出力する -->
 								<%= target.user.nickname %>
@@ -86,7 +81,7 @@
 								<%= target.content %>
 							</div>
 						</div>
-					</div>
+
 				<% end %>
 			</li>
 		<% end %>
@@ -94,4 +89,7 @@
 
 </section>
 
-<%= render "shared/footer" %>
+<section class="call-to-action">
+	<h1>いますぐダウンロードしよう</h1>
+	<%= link_to "新規登録", new_user_registration_path, class: "btn" %>
+</section>

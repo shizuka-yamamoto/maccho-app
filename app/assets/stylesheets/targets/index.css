@@ -3,23 +3,22 @@ body {
 	font-size: 12px;
 }
 
-.main {
+.top-wrapper {
 	text-align: center;
 	padding-top: 64px;
 }
 
-.main p {
+.top-wrapper p {
 	font-size: 16px;
 }
 
-.main img {
-	width: 450px;
+.top-wrapper img {
+	width: 350px;
 	vertical-align: bottom;
 }
 
 .btn {
 	text-decoration: none;
-	cursor: pointer;
 	background: cornflowerblue;
 	color: aliceblue;
 	display: block;
@@ -29,6 +28,7 @@ body {
 	font-size: 14px;
 	font-weight: bold;
 	border-radius: 4px;
+	cursor: pointer;
 	border: none;
 	border-bottom: solid 3px #627295;
 	padding: 0;
@@ -72,17 +72,17 @@ body {
 	padding-bottom: 64px;
 }
 
-.target-contents {
+.targets-wrapper {
 	background: cornflowerblue;
-	padding	: 32px;
+	padding	: 64px;
 }
 
-.target-contents > h1 {
+.targets-wrapper > h1 {
 	margin: 0;
 	text-align: center;
 }
 
-.target-contents > .subtitle {
+.targets-wrapper > p {
 	text-align: center;
 	margin: 0;
 	font-size: 16px;
@@ -90,32 +90,32 @@ body {
 	padding-bottom: 64px;
 }
 
-.target-lists {
-	text-align: center;
+.targets-lists {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	display: flex;
 }
 
-.target-lists .list {
+.targets-lists li {
 	height: 200px;
-	width: 280px;
-	margin-bottom: 14px;
-	margin-left: 10px;
-	padding: 10px;
+	width: 100%;
+	margin-bottom: 64px;
   background: white;
   border-left: solid 10px #c6e4ff;
 	font-size: 16px;
 	position: relative;
 }
 
-.upper-target {
-	display: flex;
+.target-link  {
+	display: block;
+	text-decoration: none;
+	color: #333;
+	height: 200px;
+	width: 100%;
 }
 
-.target-user {
-	margin-right: 4px;
+.target-info {
+	padding: 8px;
 }
 
 .target-date {
@@ -123,35 +123,39 @@ body {
 	bottom: 10px;
 	border-top: 1px solid #ddd;
 	font-size: 12px;
-	padding-left: 10px;
-	width: 180px;
-	text-align: left;
+	width: 160px;
 }
 
 .target-content {
-	padding-top: 14px;
-	text-align: left;
+	padding: 14px 8px 8px;
 }
 
-.target-comment-link {
-	text-align: right;
+.call-to-action {
+	color: #333;
+	text-align: center;
+	padding: 32px 0;
+}
+
+
+.call-to-action .btn {
+	margin: 0 auto;
 }
 
 
 @media (min-width: 900px) {
 
-		.main .container {
+		.top-wrapper .container {
 			display: flex;
 			width: 800px;
 			margin: 0 auto;
 		}
 
-		.main .info {
+		.top-wrapper .info {
 			width: 60%;
 			align-self: center;
 		}
 
-		.main .img {
+		.top-wrapper .img {
 			width: 40%;
 		}
 
@@ -177,8 +181,8 @@ body {
 			 width: calc(50% - 32px);
 		 }
 
-		 .target-lists {
-			 width: calc(100% - 200px);
+		 .targets-wrapper ul {
+			 width: 800px;
 			 margin: 0 auto;
 			 display: flex;
 			 justify-content: space-between;
@@ -186,7 +190,6 @@ body {
 
 		 .targets-lists li {
 			 width: 250px;
-
 		 }
 
 }

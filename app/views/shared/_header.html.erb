@@ -1,7 +1,6 @@
 <header>
-	<div class="header">
 		<div class="header-left">
-			<%= link_to("MacchoAPP", root_path, class: "header-title") %>
+			<h1><%= link_to("MacchoAPP", root_path, class: "header-title") %></h1>
 		</div>
 
 		<% if user_signed_in? %>
@@ -16,5 +15,4 @@
 			</div>
 		<% end %>
 
-	</div>
 </header>

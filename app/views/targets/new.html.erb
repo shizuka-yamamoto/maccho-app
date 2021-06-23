@@ -1,18 +1,17 @@
-<%= render "shared/header" %>
-
 <div class="target-post">
-  <%# <div class="container"> %>
+
     <div class="target-post-top">
       <div calss="target-post-right">
         <p>Startボタンをクリックして、<br>
         5分間の瞑想を始めましょう！</p>
         <div class="timer-box">
-          <div id="timer">05:00.000</div>
+          <div id="timer">05:00.000
               <div id="min"></div>
               <div id="sec"></div>
-              <div id="start">Start</div>
           </div>
-        </div>  
+          <div id="start">Start</div>
+        </div>
+      </div>
       <div calss="target-post-left">
         <%= image_tag 'meditation.png' %>
       </div>
@@ -23,10 +22,7 @@
       <h2>瞑想が終わったら、今日の目標を立てましょう！</h2>
       <%= form_with(model: @target, local: true) do |form| %>
         <%= form.text_area :content, placeholder: "今日の目標は何ですか？", rows: "10", :class => 'text-content' %>
-        <%= form.submit 'POWER！', :class=>"btn"%>
+        <%= form.submit '投稿する', :class=>"btn"%>
       <% end %>
      </div>
-  <%# </div> %>
 </div>
-
-<%= render "shared/footer" %>
