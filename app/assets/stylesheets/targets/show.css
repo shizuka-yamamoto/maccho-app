@@ -1,8 +1,7 @@
-.target-page {
-  width: 600px;
-	height: 180px;
-  margin: 60px auto;
-  padding: 15px;
+.target-page .container {
+	height: 200px;
+	margin: 64px;
+	padding: 15px;
   background-color: #fff;
   border: 6px solid #ddd;
   border-radius: 5px;
@@ -26,6 +25,11 @@
 	margin-left: auto;
 }
 
+.menu-bar a {
+	text-decoration: none;
+	color: #333;
+}
+
 .target-content {
 	font-size: 14px;
 }
@@ -35,21 +39,21 @@
 	bottom: 10px;
 }
 
-.target-comment {
-	margin: 0 auto;
-	width: 580px;
-	border: 1px solid #ddd;
-	border-radius: 8px;
-	padding: 24px;
-}
-
 .target-create-at {
 	border-top: 1px solid #ddd;
-	width: 550px;
+	width: 100%;
+}
+
+.target-comment {
+	margin: 0 auto 48px;
+	width: 80%;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 18px;
 }
 
 .comment-content {
-	width: 550px;
+	width: 100%;
 	border: 1px solid #ddd;
 	border-radius: 8px;
 }
@@ -77,3 +81,18 @@
   border-bottom: none;
 }
 
+.comment-caution > p {
+	text-align: center;
+	color: red;
+}
+
+@media (min-width: 900px) {
+	.target-page {
+		width: 800px;
+		margin: 64px auto;
+	}
+
+	.target-comment {
+		width: 80%;
+	}
+}

@@ -1,5 +1,6 @@
-<%= render "shared/header" %>
 <div class='account-page' id='account-page'>
+
+  <div class="container">
 
     <div class='account-page_header'>
       <h3>ログイン</h3>
@@ -9,31 +10,30 @@
     <div class='user-form'>
       <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>
 
-          <div class='field'>
-            <div class='field-label'>
-              <%= f.label :email%>
-            </div>
-            <div class='field-input'>
-              <%= f.email_field :email, autofocus: true%>
-            </div>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :email%>
           </div>
+          <div class='field-input'>
+            <%= f.email_field :email, autofocus: true%>
+          </div>
+        </div>
 
-          <div class='field'>
-            <div class='field-label'>
-              <%= f.label :password%>
-              <i>(英数字6文字以上)</i>
-            </div>
-            <div class='field-input'>
-              <%= f.password_field :password, autocomplete: "off"%>
-            </div>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :password%>
+            <i>(英数字6文字以上)</i>
           </div>
+          <div class='field-input'>
+            <%= f.password_field :password, autocomplete: "off"%>
+          </div>
+        </div>
 
-          <div class='actions'>
-            <%= f.submit "Log in", class: 'btn'%>
-          </div>
+        <div class='actions'>
+          <%= f.submit "Log in", class: 'btn'%>
+        </div>
 
       <% end %>
     </div>
-    
   </div>
 </div>

@@ -1,7 +1,5 @@
-<%= render "shared/header" %>
-
 <div class="target-page">
-	
+	<div class="container">
 		<div class="top-info">
 			<div class="icon">
 				<%= image_tag 'maccho.png' %>
@@ -11,7 +9,7 @@
 			</div>
 			<div class="menu-bar">
 				<% if user_signed_in? && @target.user == current_user %>
-				<a href="#">編集</a>／<a href="#">削除</a>
+				<a href="#">編集</a> ／ <a href="#">削除</a>
 				<% end %>
 			</div>
 		</div>
@@ -27,24 +25,26 @@
 				<%= @target.created_at.strftime("%H:%M  %Y/%m/%d ") %>
 			</div>
 		</div>
-		
-</div>
+	</div>
 
-<div class="target-comment">
-	<% if user_signed_in? %>
-		<%= form_with(model: @target, local: true) do |form| %>
-			<div class="comment-text">
-				<%= form.text_area :text, placeholder: "コメントする", rows: "2" , :class => 'comment-content'%>
-			</div>
-			<div class="comment-send">
-				<%= form.submit "コメントする", :class=>"comment-btn"%>
+	<div class="target-comment">
+		<% if user_signed_in? %>
+			<%= form_with(model: @target, local: true) do |form| %>
+				<div class="comment-text">
+					<%= form.text_area :text, placeholder: "コメントする", rows: "2" , :class => 'comment-content'%>
+				</div>
+				<div class="comment-send">
+					<%= form.submit "コメントする", :class=>"comment-btn"%>
+				</div>
+			<% end %>
+		<% else %>
+			<div class="comment-caution">
+				<p><strong>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</strong></p>
 			</div>
 		<% end %>
-	<% else %>
-		<strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
-	<% end %>
-	<div class="comments">
-  	<h4>＜コメント一覧＞</h4>
+		<div class="comments">
+			<h4>＜コメント一覧＞</h4>
+		</div>
 	</div>
+	
 </div>
-
