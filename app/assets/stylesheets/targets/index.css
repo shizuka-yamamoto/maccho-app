@@ -32,7 +32,6 @@ body {
 	border: none;
 	border-bottom: solid 3px #627295;
 	padding: 0;
-	transition: .4s;
 }
 
 .btn:active {
@@ -98,7 +97,6 @@ body {
 
 .targets-lists li {
 	height: 200px;
-	width: 100%;
 	margin-bottom: 64px;
   background: white;
   border-left: solid 10px #c6e4ff;
@@ -181,15 +179,18 @@ body {
 			 width: calc(50% - 32px);
 		 }
 
-		 .targets-wrapper ul {
+		 .targets-lists {
 			 width: 800px;
 			 margin: 0 auto;
 			 display: flex;
-			 justify-content: space-between;
+			 flex-wrap: wrap;
+			 justify-content: center;
 		 }
 
 		 .targets-lists li {
-			 width: 250px;
+			width: 30vh;
+			margin: 18px;
 		 }
+
 
 }
