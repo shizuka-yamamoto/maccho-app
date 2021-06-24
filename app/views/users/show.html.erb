@@ -1,4 +1,29 @@
-<div class="wrapper">
-  <%= render "side_bar" %>
-  <%= render "main_bar" %>
-</div>
+	<div class="my-target-lists">
+		<p><%= @user.nickname%>さんの投稿一覧</p>
+		<% @targets.each do |target|%>
+			<li>
+				<%= link_to target_path(target), class: 'target-link' do %>
+					<div class="container">
+							<div class="target-info">
+								<div class="target-user">
+									<!-- 投稿したユーザー名情報を出力する -->
+									<%= target.user.nickname %>
+								</div>
+								
+								<div class="target-date">
+									<!-- 投稿した時刻を出力する -->
+									<%= target.created_at.strftime("%H:%M  %Y/%m/%d") %>
+								</div>
+							</div>
+
+							<div class="lower-target">
+								<div class="target-content">
+									<!-- 投稿したメッセージ内容を記述する -->
+									<%= target.content %>
+								</div>
+							</div>
+					</div>
+				<% end %>
+			</li>
+		<% end %>
+	</div>
