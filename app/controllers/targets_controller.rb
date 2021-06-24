@@ -22,7 +22,7 @@ class TargetsController < ApplicationController
 
   private
   def target_params
-    params.require(:target).permit(:content).merge(user_id: current_user)
+    params.require(:target).permit(:content).merge(user_id: current_user.id)
   end
 
 end
