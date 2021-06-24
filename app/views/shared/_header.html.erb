@@ -6,7 +6,7 @@
 		<% if user_signed_in? %>
 			<div class="header-right">
 				<%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-				<%= link_to current_user.nickname, root_path%>
+				<%= link_to current_user.nickname, user_path(current_user) %>
 			</div>
 		<% else %>
 			<div class="header-right">
