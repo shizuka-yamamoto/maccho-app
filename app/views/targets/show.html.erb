@@ -9,7 +9,7 @@
 			</div>
 			<div class="menu-bar">
 				<% if user_signed_in? && @target.user == current_user %>
-				<a href="#">編集</a> ／ <a href="#">削除</a>
+				<%= link_to "削除", target_path, method: :delete %>
 				<% end %>
 			</div>
 		</div>
