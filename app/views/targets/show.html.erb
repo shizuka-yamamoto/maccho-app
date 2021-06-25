@@ -32,7 +32,7 @@
 		<% if user_signed_in? %>
 			<%= form_with(model: [@target, @comment], local: true) do |form| %>
 				<div class="comment-text">
-					<%= form.text_area :text, placeholder: "コメントする", rows: "2" , :class => 'comment-content'%>
+					<%= form.text_area :text, placeholder: " コメントする", rows: "2" , :class => 'comment-content'%>
 				</div>
 				<div class="comment-send">
 					<%= form.submit "コメントする", :class=>"comment-btn"%>
