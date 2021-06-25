@@ -6,7 +6,7 @@
 				<%= image_tag 'maccho.png' %>
 			</div>
 			<div class="user-nickname">
-				<%= @target.user.nickname %>
+			<%= link_to @target.user.nickname, user_path(@target.user) %>
 			</div>
 			<div class="menu-bar">
 				<% if user_signed_in? && @target.user == current_user %>

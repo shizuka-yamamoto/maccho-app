@@ -16,8 +16,10 @@
 	margin-right: 8px;
 }
 
-.user-nickname {
+.user-nickname > a {
 	font-size: 14px;
+	text-decoration: none;
+	color: #333;
 }
 
 .menu-bar {

@@ -2,12 +2,38 @@
 	padding: 20px;
 }
 
-.my-target-lists > p {
+.my-profile-name > p {
 	font-weight: bold;
 	font-size: 14px;
 	text-align: center;
 	border-bottom: 1px solid #ddd;
 	width: 180px;
+}
+
+.calendar-heading {
+	background: cornflowerblue;
+	border-radius: 4px 4px 0 0;
+	line-height: 25px;
+}
+
+.calendar-heading > a {
+	margin: 0 15px;
+	text-decoration: none;
+	color: #333;
+	border-bottom: 1px solid #333;
+}
+
+.calendar-heading > a:hover {
+	background: #ddd;
+}
+
+.simple-calendar .day {
+	height: 45px;
+}
+
+.post-sign {
+	text-align: center;
+	color: orange;
 }
 
 .my-target-lists > li{
@@ -28,5 +54,14 @@
 	.my-target-lists {
 		width: 800px;
 		margin: 44px auto;
+	}
+
+	.my-calender {
+		display: flex;
+		justify-content: space-around;
+	}
+	
+	.calender {
+		width: 50%;
 	}
 }

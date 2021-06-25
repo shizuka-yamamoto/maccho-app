@@ -1,5 +1,22 @@
 	<div class="my-target-lists">
-		<p><%= @user.nickname%>さんの投稿一覧</p>
+		<div class="my-calender">
+				<div class="my-profile-name">
+					<p><%= @user.nickname%>さんの投稿一覧</p>
+				</div>
+			
+				<div class="calender">
+					<%= month_calendar events: @targets do |date, targets| %>
+						<%= date.day %>
+						<% targets.each do |target| %>
+							<div class="post-sign">
+								<%= "⚫︎" if target.present? %>
+							</div>
+						<% end %>
+					<% end %>
+				</div>
+		</div>
+
+
 		<% @targets.each do |target|%>
 			<li>
 				<%= link_to target_path(target), class: 'target-link' do %>
