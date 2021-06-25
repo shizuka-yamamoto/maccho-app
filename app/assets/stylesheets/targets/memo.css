@@ -1,0 +1,55 @@
+.memo--timer img {
+	width: 80px;
+	display: block;
+	margin: 45px auto;
+}
+
+.memo--timer > p {
+	text-align: center;
+	font-size: 14px;
+}
+
+.memo--timer .container {
+	margin: 20px auto;
+	width: 365px;
+	padding: 15px;
+	text-align: center;
+	border: solid 1px #ddd;
+	border-radius: 5px;
+}
+
+#memo-timer {
+	background: #ddd;
+	height: 120px;
+	line-height: 120px;
+	font-size: 40px;
+	margin-bottom: 15px;
+}
+
+.memo-controls > div {
+	cursor: pointer;
+	user-select: none;
+	width: 75px;
+	background: #ddd;
+	height: 45px;
+	line-height: 45px;
+	margin-right: 4px;
+}
+
+.memo-controls {
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+}
+
+.memo-controls > div:hover {
+	opacity: 0.7;
+}
+
+.memo-bottom p {
+	text-align: center;
+}
+
+.memo-bottom > img {
+	width: 200px;
+}

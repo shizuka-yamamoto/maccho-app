@@ -1,7 +1,6 @@
 class TargetsController < ApplicationController
   before_action:set_target, only: [:show, :destroy]
 
-
   def index
     @targets = Target.includes(:user)
   end
@@ -25,6 +24,10 @@ class TargetsController < ApplicationController
   def destroy
     @target.destroy
     redirect_to root_path
+  end
+
+  def memo
+    
   end
 
   private
