@@ -31,13 +31,10 @@ body {
 	border-radius: 4px;
 	cursor: pointer;
 	border: none;
-	border-bottom: solid 3px #627295;
 	padding: 0;
 }
 
 .btn:active {
-	-webkit-transform: translateY(2px);
-  transform: translateY(2px);
   border-bottom: none;
 }
 

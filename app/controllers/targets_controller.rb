@@ -19,6 +19,8 @@ class TargetsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @target.comments.includes(:user)
   end
 
   def destroy
