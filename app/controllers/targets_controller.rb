@@ -1,5 +1,6 @@
 class TargetsController < ApplicationController
-  before_action:set_target, only: [:show, :destroy]
+  before_action :set_target, only: [:show, :destroy]
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @targets = Target.includes(:user)
@@ -39,6 +40,12 @@ class TargetsController < ApplicationController
 
   def set_target
     @target = Target.find(params[:id])
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to new_user_registration_path
+    end
   end
 
 end

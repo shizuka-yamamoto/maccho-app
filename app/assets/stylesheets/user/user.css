@@ -92,6 +92,13 @@
   font-size: 13px;
 }
 
+.login-flash-message {
+  margin: 16px 0;
+  color: #d65f4c;
+  font-size: 13px;
+  font-weight: bold;
+}
+
 
 @media (min-width: 900px) {
   .account-page {
