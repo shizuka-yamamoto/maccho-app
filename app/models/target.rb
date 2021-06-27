@@ -1,7 +1,6 @@
 class Target < ApplicationRecord
-	belongs_to :user
-	has_many :comments, dependent: :destroy
+  belongs_to :user
+  has_many :comments, dependent: :destroy
 
-	validates :content, presence: true
-
+  validates :content, presence: true
 end

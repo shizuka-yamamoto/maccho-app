@@ -30,10 +30,10 @@ class TargetsController < ApplicationController
   end
 
   def memo
-    
   end
 
   private
+
   def target_params
     params.require(:target).permit(:content, :start_time).merge(user_id: current_user.id)
   end
@@ -43,9 +43,6 @@ class TargetsController < ApplicationController
   end
 
   def move_to_index
-    unless user_signed_in?
-      redirect_to new_user_registration_path
-    end
+    redirect_to new_user_registration_path unless user_signed_in?
   end
-
 end
