@@ -4,6 +4,10 @@
 
     <div class='account-page_header'>
       <h3>ログイン</h3>
+      <div class='login-flash-message'>
+        <%= flash[:notice] %>
+        <%= flash[:alert] %>
+      </div>
       <%# <%= render "devise/shared/links"%> 
     </div>
 
