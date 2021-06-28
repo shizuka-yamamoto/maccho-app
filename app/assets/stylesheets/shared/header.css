@@ -1,25 +1,79 @@
 header {
-  line-height: 45px;
-	background: cornflowerblue;
+  height: 60px;
   display: flex;
   justify-content: space-around;
-}
-
-
-.header-title {
-  text-decoration: none;
-  color: aliceblue;
-}
-
-.header-right {
-  display: flex;
   align-items: center;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
 }
 
-.header-right > a {
+header li {
+  list-style: none;
+}
+
+.header-title{
   text-decoration: none;
-  color: aliceblue;
+  color: #333;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.login {
+  margin-right: 8px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.signup {
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.current_user_name{
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px;
+}
+
+.current_user_name:hover{
+  opacity: 0.7;
+  background: #ddd;
+  border-radius: 5px;
+}
+
+.show-lists{
+  position: absolute;
+  right: 10%;
+  top: 50px;
+  background-color: #fff;
+}
+
+.pull-down-list{
+  padding: 15px 25px 15px 15px;
+  border: 1px solid #ddd;
+}
+
+.pull-down-custom {
+  text-decoration: none;
   font-size: 14px;
-  display: block;
-  padding-right: 8px;
+  color: #333;
+}
+
+.pull-down-custom:hover {
+  opacity: 0.7;
+  border-bottom: 1px solid #ddd;
+}
+
+.hidden{
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .show-lists{
+    position: absolute;
+    right: 15%;
+    top: 50px;
+  }
+  
 }

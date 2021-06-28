@@ -38,7 +38,7 @@ body {
 }
 
 .features {
-	background: #f2f2f3;
+	background: #f3f3f3;
 }
 
 .features img {
@@ -65,7 +65,7 @@ body {
 }
 
 .targets-wrapper {
-	background: #b6cdf3;
+	background: #f3f3f3;
 	padding	: 64px;
 }
 
@@ -122,7 +122,7 @@ body {
 }
 
 .call-to-action {
-	background: #75a5f8;
+	background: cornflowerblue;
 	color: #333;
 	text-align: center;
 	padding: 32px 0;
