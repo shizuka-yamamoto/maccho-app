@@ -1,20 +1,29 @@
-.memo--timer img {
-	width: 80px;
-	display: block;
-	margin: 45px auto;
+.memo--timer .container{
+	margin: 64px;
+	text-align: center;
 }
 
-.memo--timer > p {
-	text-align: center;
+.memo--timer h1 {
+	border-bottom: solid 1px #ddd;
+	font-size: 18px;
+	margin: 35px auto;
+}
+
+.memo--timer img {
+	width: 80px;
+	margin: 0 auto 35px;
+}
+
+.memo--timer p {
 	font-size: 14px;
 }
 
-.memo--timer .container {
-	margin: 20px auto;
+.memo-timer-box {
+	margin: 45px auto ;
 	width: 365px;
 	padding: 15px;
 	text-align: center;
-	border: solid 1px #ddd;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
 }
 
@@ -46,10 +55,18 @@
 	opacity: 0.7;
 }
 
-.memo-bottom p {
-	text-align: center;
-}
-
 .memo-bottom > img {
 	width: 200px;
+}
+
+@media (min-width: 900px) {
+	.memo--timer .container{
+		margin: 64px auto;
+		width: 600px;
+	}
+	
+	.memo--timer h1 {
+		width: 500px;
+		margin: 35px auto;
+	}
 }

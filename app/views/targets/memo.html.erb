@@ -1,18 +1,25 @@
 <div class="memo--timer">
-	<%= image_tag 'moya.png' %>
-	<p>モヤモヤと悩んだ時は紙に書き出しましょう！</p>
-	<p>用意するのは「紙」と「ペン」だけ。</p>
-	<p>タイマーをセットして時間の限り書き続けましょう！</p>
 	<div class="container">
-		<div id="memo-timer">00:00:000</div>
-			<div class="memo-controls">
-				<div id="memo-min">Min</div>
-				<div id="memo-sec">Sec</div>
-				<div id="memo-reset">Reset</div>
-				<div id="memo-start">Start</div>
+
+		<h1>モヤモヤは紙に書き出して、あたまの中を整理しよう</h1>
+		<%= image_tag 'moya.png' %>
+		<div class="description">
+			<p>モヤモヤと悩んだ時は紙に書き出しましょう！</p>
+			<p>用意するのは「紙」と「ペン」だけ。</p>
+			<p>タイマーをセットして時間の限り書き続けましょう！</p>
 		</div>
-	</div>
-	<div class="memo-bottom">
-		<%= image_tag 'writing.png' %>
+
+		<div class="memo-timer-box">
+			<div id="memo-timer">00:00:000</div>
+				<div class="memo-controls">
+					<div id="memo-min">Min</div>
+					<div id="memo-sec">Sec</div>
+					<div id="memo-reset">Reset</div>
+					<div id="memo-start">Start</div>
+			</div>
+		</div>
+		<div class="memo-bottom">
+			<%= image_tag 'writing.png' %>
+		</div>
 	</div>
 </div>

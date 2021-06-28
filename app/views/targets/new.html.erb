@@ -1,29 +1,28 @@
 <div class="target-post">
+  <div class="container">
+    <h1>5分間の瞑想であたまの中を整理し、きょうの目標を立てましょう！</h1>
 
     <div class="target-post-top">
-      <div calss="target-post-right">
-        <p>Startボタンをクリックして、<br>
-        5分間の瞑想を始めましょう！</p>
-        <div class="timer-box">
-          <div id="timer">05:00.000
-              <div id="min"></div>
-              <div id="sec"></div>
-          </div>
-          <div id="start">Start</div>
+      <div class="timer-box">
+        <div id="timer">05:00.000
+            <div id="min"></div>
+            <div id="sec"></div>
         </div>
+        <div id="start"><i class="far fa-play-circle fa-4x"></i></div>
       </div>
-      <div calss="target-post-left">
-        <%= image_tag 'meditation.png' %>
-      </div>
+      <%= image_tag 'yoga.png' %>
     </div>
-      
 
     <div class="target-post-bottom">
-      <h2>瞑想が終わったら、今日の目標を立てましょう！</h2>
-      <%= form_with(model: @target, local: true) do |form| %>
-        <%= form.hidden_field :start_time, value:Time.now.strftime("%Y-%m-%d") %>
-        <%= form.text_area :content, placeholder: "今日の目標は何ですか？", rows: "10", :class => 'text-content' %>
-        <%= form.submit '投稿する', :class=>"btn"%>
-      <% end %>
-     </div>
+      <div class="target-box">
+        <h2>きょうの目標</h2>
+        <%= form_with(model: @target, local: true) do |form| %>
+          <%= form.hidden_field :start_time, value:Time.now.strftime("%Y-%m-%d") %>
+          <%= form.text_area :content, placeholder: "今日の目標は何ですか？", rows: "10", :class => 'text-content' %>
+          <%= form.submit '投稿する', :class=>"btn"%>
+        <% end %>
+      </div>
+      <%= image_tag 'start.png' %>
+    </div>
+  </div>
 </div>

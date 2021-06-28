@@ -1,73 +1,80 @@
-	.target-post {
-	padding: 36px;
+.target-post .container {
+	margin: 64px;
+	text-align: center;
 }
 
-.target-post-top {
+.target-post h1 {
+	font-size: 20px;
+	border-bottom: 1px solid #ddd;
+}
+
+
+.timer-box {
+	background: white;
+	margin: 45px auto;
+	width: 365px;
+	padding: 15px;
 	text-align: center;
-	margin: 0 auto 64px;
-	padding: 25px;
-	border: 1px solid #ddd;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
 
-.target-post-top p {
-	font-size: 14px;
-	font-weight: bold;
-}
-
-.timer-box {
-	display: flex;
-	justify-content: center;
-}
-
 #timer {
-	background: #f2f2f3;
-	padding: 15px;
+	background: #ddd;
+	height: 120px;
+	line-height: 120px;
+	font-size: 40px;
+	color: #333;
+	margin-bottom: 15px;
+}
+
+.fa-play-circle {
+	margin-top: 14px;
+	cursor: pointer;
+	color: #333;
+}
+
+.fa-play-circle:hover {
+	opacity: 0.7;
+}
+
+.target-post-top img {
+	width: 100px;
+}
+
+
+.target-box {
+	width: 400px;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
+	margin: 64px auto;
+	padding: 15px;
+}
+
+.target-box > h2 {
+	border-bottom: 1px solid #ddd;
+	width: 50%;
+	margin: 25px auto;
+}
+
+.target-box .text-content {
+	width: 320px;
 	font-size: 16px;
 }
 
-#start {
-	background: cornflowerblue;
-  color: aliceblue;
-  width: 45px;
-  height: 45px;
-  line-height: 45px;
-  border-radius: 50%;
-  text-align: center;
-  font-weight: bold;
-	cursor: pointer;
-  overflow: hidden;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-  border-bottom: solid 3px #627295;
-  transition: .4s;
-	margin-left: 14px;
+.target-post-bottom img {
+	width: 180px;
 }
 
-#start:active {
-  -webkit-transform: translateY(2px);
-  transform: translateY(2px);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
-  border-bottom: none;
-}
-
-.target-post img {
-	width: 160px;
-}
-
-.target-post-bottom {
-	text-align: center;
-}
-
-
-.text-content {
-	width: 320px;
-}
 
 @media (min-width: 900px) {
-	.target-post-top {
-		width: 600px;
-		display: flex;
-		justify-content: center;
+	.target-post .container {
+		margin: 64px auto;
+		width: 620px;
+	}
+	
+	.target-post h1 {
+		margin: 0 auto;
+		width: 620px;
 	}
 }
