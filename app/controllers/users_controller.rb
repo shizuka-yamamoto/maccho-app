@@ -1,10 +1,11 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: [:edit, :update, :show]
+
   def edit
-    
   end
 
   def	update
-    if	current_user.update(user_params)
+    if	@user.update(user_params)
       redirect_to root_path
     else
       render :edit
@@ -12,7 +13,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
     @targets = @user.targets
   end
 
@@ -21,4 +21,9 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:nickname, :email)
   end
+
+  def set_user
+    @user = User.find(params[:id])
+  end
+
 end
