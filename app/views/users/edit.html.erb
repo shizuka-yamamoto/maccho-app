@@ -25,6 +25,15 @@
           </div>
         </div>
 
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :image %>
+          </div>
+          <div class='field-input'>
+            <%= f.file_field :image %>
+          </div>
+        </div>
+
         <div class='actions'>
           <%= f.submit "Update", class: 'btn'%>
         </div>

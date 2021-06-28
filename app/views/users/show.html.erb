@@ -2,8 +2,8 @@
 		<div class="my-calender">
 				<div class="my-profile-name">
 					<p><%= @user.nickname%>さんの投稿一覧</p>
+					<%= image_tag @user.image.variant(resize: '100x100'), class: 'user-image' if @user.image.attached? %>
 				</div>
-			
 				<div class="calender">
 					<%= month_calendar events: @targets do |date, targets| %>
 						<%= date.day %>
