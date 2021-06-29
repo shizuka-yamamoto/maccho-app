@@ -1,41 +1,46 @@
 <div class="target-page">
-
 	<div class="container">
-		<div class="top-info">
-			<div class="icon">
-				<%# <%= image_tag 'maccho.png' %>
-			</div>
-			<div class="user-nickname">
-			<%= link_to @target.user.nickname, user_path(@target.user) %>
-			</div>
-			<div class="menu-bar">
-				<% if user_signed_in? && @target.user == current_user %>
-				<%= link_to "削除", target_path, method: :delete %>
+
+		<div class="target---box">
+			<div class="user---info">
+				<%= link_to user_path(@target.user), class: 'target---link' do %>
+					<div class="user---image">
+						<% if @target.user.image.attached? %>
+							<%= image_tag @target.user.image.variant(resize: '50x50'), class: 'user---img' %>
+						<% else %>
+							<i class="fas fa-user-circle fa-3x"></i>
+						<% end %>
+					</div>
+					
+					<div class="user---name">
+						<%= @target.user.nickname %>
+					</div>
 				<% end %>
+
+				<div class="menu---bar">
+					<% if user_signed_in? && @target.user == current_user %>
+						<%= link_to "削除", target_path, method: :delete %>
+					<% end %>
+				</div>
 			</div>
-		</div>
-		
-		<div class="middle-info	">
-			<div class="target-content">
+				
+			<div class="target---content">
 				<%= @target.content %>
 			</div>
-		</div>
 
-		<div class="bottom-info">
-			<div class="target-create-at">
+			<div class="target---date">
 				<%= @target.created_at.strftime("%H:%M  %Y/%m/%d ") %>
 			</div>
 		</div>
-	</div>
 
 	<div class="target-comment">
 		<% if user_signed_in? %>
 			<%= form_with(model: [@target, @comment], local: true) do |form| %>
 				<div class="comment-text">
-					<%= form.text_area :text, placeholder: " コメントする", rows: "2" , :class => 'comment-content'%>
+					<%= form.text_area :text, placeholder: " コメントする", rows: "2" , class: 'comment-content'%>
 				</div>
 				<div class="comment-send">
-					<%= form.submit "コメントする", :class=>"comment-btn"%>
+					<%= form.submit "コメントする", class: "comment-btn"%>
 				</div>
 			<% end %>
 		<% else %>
@@ -44,7 +49,7 @@
 			</div>
 		<% end %>
 		<div class="comments">
-			<h4>＜コメント一覧＞</h4>
+			<h2>＜コメント一覧＞</h2>
 				<% @comments.each do |comment| %>
         <p>
           <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
