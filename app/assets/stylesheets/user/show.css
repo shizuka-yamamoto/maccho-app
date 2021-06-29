@@ -2,15 +2,28 @@
 	padding: 20px;
 }
 
+.my-profile-name {
+	text-align: center;
+}
+
 .my-profile-name > p {
 	font-weight: bold;
-	font-size: 14px;
+	font-size: 16px;
 	text-align: center;
 	border-bottom: 1px solid #ddd;
-	width: 180px;
+	width: 200px;
+}
+
+.user-image {
+	text-align: center;
+}
+
+.avatar {
+	color: #333;
 }
 
 .calender {
+	margin: 35px 0;
 	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
 }
 
