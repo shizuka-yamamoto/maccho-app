@@ -55,38 +55,46 @@
 	</div>
 </section>
 
+<%# 最近の投稿一覧 %>
 <section class="targets-wrapper">
 
 	<h1 class='title'>＼最近の投稿一覧／</h1>
 	<p>コメントして応援することができます！</p>
 
-	<ul class='targets-lists'>
+	<ul class='targets--list'>
 		<% @targets.each do |target|%>
 			<li>
-				<%= link_to target_path(target), class: 'target-link' do %>
+			<%= link_to target_path(target), class: 'target-link' do %>
 
-						<div class="target-info">
-							<div class="target-user">
-								<!-- 投稿したユーザー名情報を出力する -->
-								<%= target.user.nickname %>
-							</div>
-							
-							<div class="target-date">
-								<!-- 投稿した時刻を出力する -->
-								<%= target.created_at.strftime("%H:%M  %Y/%m/%d") %>
-							</div>
+				<div class="target--box">
+
+					<div class="user--info">
+						<div class="user--image">
+							<% if target.user.image.attached? %>
+								<%= image_tag target.user.image.variant(resize: '50x50'), class: 'user--img' %>
+							<% else %>
+								<i class="fas fa-user-circle fa-3x"></i>
+							<% end %>
 						</div>
 
-						<div class="lower-target">
-							<div class="target-content">
-								<!-- 投稿したメッセージ内容を記述する -->
-								<%= target.content %>
-							</div>
+						<div class="user--name">
+							<%= target.user.nickname %>
 						</div>
+					</div>
 
-				<% end %>
-			</li>
-		<% end %>
+					<div class="target--content">
+						<%= target.content %>
+					</div>
+
+					<div class="target--date">
+						<%= target.created_at.strftime("%H:%M  %Y/%m/%d") %>
+					</div>
+
+				</div>
+
+			<% end %>
+		</li>
+	<% end %>
 	</ul>
 
 </section>

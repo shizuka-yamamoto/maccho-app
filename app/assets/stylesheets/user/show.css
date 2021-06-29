@@ -1,16 +1,54 @@
-.my-target-lists {
-	padding: 20px;
+.my-page {
+	margin: 20px;
 }
 
-.my-profile-name > p {
-	font-weight: bold;
-	font-size: 14px;
+li{
+	list-style: none;
+}
+
+.my-profile {
+	width: 200px;
 	text-align: center;
-	border-bottom: 1px solid #ddd;
-	width: 180px;
 }
 
+.my-profile .user-image {
+	padding: 10px;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	margin-bottom: 8px;
+}
+
+
+.my-profile > p {
+	font-weight: bold;
+	font-size: 16px;
+	border-bottom: 1px solid #ddd;
+}
+
+.fas {
+	color: #333;
+}
+
+.my-profile .fas {
+	padding: 10px;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	margin-bottom: 8px;
+}
+
+.my-profile .user-edit {
+	color: rgb(104, 100, 100);
+	font-size: 14px;
+}
+
+.my-profile .user-edit:hover {
+	opacity: 0.7;
+}
+
+
+/* カレンダー */
 .calender {
+	margin: 35px 0 55px;
 	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -22,13 +60,12 @@
 
 .calendar-heading > a {
 	margin: 0 15px;
-	text-decoration: none;
 	color: #333;
 	border-bottom: 1px solid #333;
 }
 
 .calendar-heading > a:hover {
-	background: #ddd;
+	opacity: 0.7;
 }
 
 .simple-calendar .day {
@@ -39,33 +76,66 @@
 	text-align: center;
 	color: orange;
 }
+/* カレンダー */
 
-.my-target-lists > li{
-	list-style: none;
+.targets-list {
+	margin: 0;
+	padding: 0;
 }
 
-.my-target-lists .container {
+.target-box {
+	padding: 12px;
+	margin: 0 auto;
 	height: 180px;
-	margin: 32px;
-	padding: 15px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+	font-size: 14px;
 	position: relative;
 }
 
+.user-info {
+	display: flex;
+	align-items: center;
+}
+
+.user-image .user-img {
+	border-radius: 50%;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.user-name {
+	margin-left: 8px;
+}
+
+.target-content {
+	padding: 8px;
+}
+
+.target-date {
+	position: absolute;
+	bottom: 10px;
+	border-top: 1px solid #ddd;
+	font-size: 12px;
+	width: 160px;
+}
 
 @media (min-width: 900px) {
-	.my-target-lists {
+	.my-page {
 		width: 800px;
 		margin: 44px auto;
 	}
 
-	.my-calender {
+	.my-page .container {
 		display: flex;
 		justify-content: space-around;
 	}
 	
 	.calender {
 		width: 50%;
+	}
+
+	.target-box {
+		margin: 0 auto;
+		width: 70%;
 	}
 }
