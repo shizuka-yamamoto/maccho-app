@@ -2,9 +2,13 @@
 	<div class="container">
 		<div class="info">
 			<h1>きょうの目標をコトバにしよう！</h1>
-			<p>朝起きてすぐやることをおすすめします</p>
+			<p>目標達成に向けサポートするアプリ</p>
 			<div class="btn-box">
-				<%= link_to("さっそくやってみる", new_target_path, {class: "btn"}) %>
+				<% if user_signed_in? %>
+					<%= link_to("目標を宣言", new_target_path, {class: "btn"}) %>
+				<% else %>
+					<%= link_to "新規登録", new_user_registration_path, class: "btn" %>
+				<% end %>
 			</div>
 		</div>
 		<div class="pic">
@@ -15,19 +19,17 @@
 
 <%# アプリの特徴 %>
 <section class="features">
-	<h1>Maccho APPの特徴</h1>
+	<h1>BUILDMEの特徴</h1>
 
 	<div class="container">
-	
 		<section>
 			<div class="pic">
 				<%= image_tag 'meditation2.png' %>
 			</div>
 			<div class="info">
-				<h1>5分間の瞑想からスタート！</h1>
-				<p>スタートボタンをクリックすると、5分間の瞑想が始まります。ここでは呼吸に集中して心を整えます。
-				5分間が経過したら今日の目標を言語化し、投稿しましょう！</p>
-				<%= link_to("さっそくやってみる", new_target_path, {class: "btn"}) %>
+				<h2>5分間の瞑想からスタート！</h2>
+				<p>目標を宣言する前に、5分間の瞑想から始めましょう！呼吸を整えて集中することで頭の中が整理されます。5分間のカウントダウンタイマーが終わったら、今日の目標を宣言しましょう！</p>
+
 			</div>
 		</section>
 
@@ -36,9 +38,8 @@
 				<%= image_tag 'time.png' %>
 			</div>
 			<div class="info">
-				<h1>メモ書きでモヤモヤを吹っ飛ばそう！</h1>
-				<p>悩んで何も進まない時はメモ書きを始めましょう！用意するのは紙とペンだけ！用意できたらタイマーをセットし、時間の限り描き続けましょう！</p>
-				<%= link_to("メモ書き", memo_targets_path, {class: "btn"}) %>
+				<h2>メモ書きでモヤモヤを吹っ飛ばそう！</h2>
+				<p>悩んで何も進まない時はメモ書きを始めましょう！用意するのは紙とペンだけ！タイマーをセットし、時間の限り描き続けましょう！</p>
 			</div>
 		</section>
 
@@ -47,11 +48,10 @@
 				<%= image_tag 'finish.png' %>
 			</div>
 			<div class="info">
-				<h1>すごい</h1>
-				<p>マイページには今まで自分が投稿した目標が保存されています。</p>
+				<h2>カレンダーを見たら一目瞭然</h2>
+				<p>マイページには今までの投稿記録と投稿に紐づいたカレンダーがあります。目標を投稿した日には、カレンダーに●印がつくので、目標を立てたかどうかは一目でわかります。</p>
 			</div>
 		</section>
-		
 	</div>
 </section>
 
@@ -67,7 +67,6 @@
 			<%= link_to target_path(target), class: 'target-link' do %>
 
 				<div class="target--box">
-
 					<div class="user--info">
 						<div class="user--image">
 							<% if target.user.image.attached? %>
@@ -89,7 +88,6 @@
 					<div class="target--date">
 						<%= target.created_at.strftime("%H:%M  %Y/%m/%d") %>
 					</div>
-
 				</div>
 
 			<% end %>
@@ -99,7 +97,4 @@
 
 </section>
 
-<section class="call-to-action">
-	<h1>いますぐダウンロードしよう</h1>
-	<%= link_to "新規登録", new_user_registration_path, class: "btn" %>
-</section>
+

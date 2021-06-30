@@ -1,5 +1,5 @@
 .my-page {
-	margin: 20px;
+	padding: 64px 32px;
 }
 
 li{
@@ -12,12 +12,10 @@ li{
 }
 
 .my-profile .user-image {
-	padding: 10px;
+	margin: 15px;
 	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
-	margin-bottom: 8px;
 }
-
 
 .my-profile > p {
 	font-weight: bold;
@@ -26,14 +24,11 @@ li{
 }
 
 .fas {
-	color: #333;
+	color: rgb(104, 100, 100);
 }
 
 .my-profile .fas {
 	padding: 10px;
-	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
-	border-radius: 5px;
-	margin-bottom: 8px;
 }
 
 .my-profile .user-edit {
@@ -76,16 +71,12 @@ li{
 	text-align: center;
 	color: orange;
 }
+
 /* カレンダー */
 
-.targets-list {
-	margin: 0;
-	padding: 0;
-}
-
 .target-box {
-	padding: 12px;
-	margin: 0 auto;
+	padding: 10px;
+	margin: 32px auto;
 	height: 180px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
   border-radius: 5px;

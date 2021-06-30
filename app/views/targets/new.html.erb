@@ -14,12 +14,12 @@
     </div>
 
     <div class="target-post-bottom">
-      <div class="target-box">
+      <div class="new-target-box">
         <h2>きょうの目標</h2>
         <%= form_with(model: @target, local: true) do |form| %>
           <%= form.hidden_field :start_time, value:Time.now.strftime("%Y-%m-%d") %>
-          <%= form.text_area :content, placeholder: "今日の目標は何ですか？", rows: "10", :class => 'text-content' %>
-          <%= form.submit '投稿する', :class=>"btn"%>
+          <%= form.text_area :content, placeholder: "今日の目標は何ですか？", rows: "10", class: 'text-content' %>
+          <%= form.submit '投稿する', class: "btn"%>
         <% end %>
       </div>
       <%= image_tag 'start.png' %>
