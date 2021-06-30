@@ -6,7 +6,7 @@
 			<% if @user.image.attached? %>
 				<%= image_tag @user.image.variant(resize: '160x160'), class: 'user-image'  %>
 			<% else %>
-				<i class="fas fa-user-circle fa-10x"></i>
+				<i class="fas fa-user-circle user-image fa-8x"></i>
 			<% end %>
 			<div>
 				<%= link_to "アカウントの編集", edit_user_path(current_user), class: "user-edit" %>
