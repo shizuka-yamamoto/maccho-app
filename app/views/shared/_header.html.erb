@@ -15,10 +15,21 @@
 	</ul>
 
 	<ul class="nav-lists">
-		<div class="nav-list" id="lists">
+		<div class="nav-list">
 			<% if user_signed_in? %>
-				<li class="current_user_name">
+				<li class="current-user-name" id="lists">
 					<%= current_user.nickname %>
+				</li>
+				<li class="contact">
+					<div id="open">
+						<i class="far fa-question-circle fa-2x"></i>
+					</div>
+					<div id="mask" class="hidden"></div>
+					<section id="modal" class="hidden">
+						<h1>お問い合わせ</h1>
+						<p>ご意見やご要望は<%= link_to "こちら", "https://forms.gle/egq6KQn8gX3Ko1AH6" %>からお問い合わせください。</p>
+					<div id="close">閉じる</div>
+					</section>
 				</li>
 			<% else %>
 				<li>
