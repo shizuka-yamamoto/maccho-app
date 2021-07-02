@@ -6,11 +6,12 @@
 require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
-require("../timer.js")
-require("../memo.js")
+require("../meditation_timer.js")
+require("../memo_timer.js")
 require("../account.js")
 require("../training.js")
 require("../contact.js")
+require("../memo_manual.js")
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
