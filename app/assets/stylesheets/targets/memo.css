@@ -1,23 +1,95 @@
-.memo--timer .container{
+.memo-writing .container{
 	margin: 64px 32px;
 	text-align: center;
 }
 
-.memo--timer h1 {
+.memo-writing h1 {
 	border-bottom: solid 1px #ddd;
 	font-size: 18px;
 	line-height: 1.8;
 	margin: 20px auto;
 }
 
-.memo--timer img {
+.memo-writing img {
 	width: 80px;
 	margin: 35px auto 55px;
 }
 
-.memo--timer p {
+.memo-writing p {
 	font-size: 16px;
 	line-height: 1.8;
+}
+
+#memo-open {
+	cursor: pointer;
+	border-bottom: 1px solid #333;
+	font-weight: bold;
+}
+
+#memo-open:hover {
+opacity: 0.7;
+}
+
+#memo-mask {
+	background: rgba(0, 0, 0, 0.4);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 1;
+}
+
+#memo-mask.hidden {
+	display: none;
+}
+
+#memo-modal {
+	background: #fff;
+	width: 350px;
+	padding: 20px;
+	border-radius: 4px;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	transition: transform 0.4s;
+	z-index: 2;
+	text-align: left;
+}
+
+#memo-modal .title {
+	font-size: 18px;
+}
+
+#memo-modal li {
+	font-size: 16px;
+	line-height: 1.8;
+}
+
+#memo-modal.hidden {
+	transform: translate(0, -1000px);
+}
+
+#memo-modal img {
+	width: 300px;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+	margin: 20px auto;
+}
+
+.fa-external-link-alt:hover {
+	opacity: 0.7;
+}
+
+#memo-close {
+	cursor: pointer;
+	width: 100px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	text-align: center;
+	padding: 10px;
+	margin: 16px auto 0;
 }
 
 .memo-timer-box {
@@ -62,13 +134,26 @@
 }
 
 @media (min-width: 900px) {
-	.memo--timer .container{
+	.memo-writing .container{
 		margin: 64px auto;
 		width: 600px;
 	}
 	
-	.memo--timer h1 {
+	.memo-writing h1 {
 		width: 500px;
 		margin: 35px auto;
 	}
+
+	#memo-modal {
+		width: 600px;
+	}
+
+	.memo-img {
+		text-align: center;
+	}
+
+	#memo-modal img {
+		width: 550px;
+	}
+	
 }

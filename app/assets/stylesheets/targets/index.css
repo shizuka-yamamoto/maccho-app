@@ -9,12 +9,12 @@ body {
 }
 
 .top-wrapper h1 {
-	font-size: 20px;
+	font-size: 24px;
 	margin-bottom: 10px;
 }
 
 .top-wrapper p {
-	font-size: 16px;
+	font-size: 18px;
 }
 
 .top-wrapper img {
@@ -54,7 +54,7 @@ body {
 .features > h1 {
 	text-align: center;
 	padding: 64px 0;
-	font-size: 18px;
+	font-size: 24px;
 }
 
 .features .container {
@@ -62,13 +62,13 @@ body {
 }
 
 .features h2 {
-	font-size: 16px;
+	font-size: 20px;
 	margin: 8px;
 }
 
 .features p {
 	line-height: 1.8;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 .features section {
