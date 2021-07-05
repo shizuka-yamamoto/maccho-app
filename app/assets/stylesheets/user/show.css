@@ -74,6 +74,46 @@ li{
 
 /* カレンダー */
 
+/* タブメニュー */
+.tab-menu {
+	display: flex;
+	border-bottom: 1px solid #ddd;
+	
+}
+
+
+.tab-menu li a {
+	width: 100px;
+	display: inline-block;
+	text-align: center;
+	padding: 8px 0;
+	color: #333;
+	text-decoration: none;
+	border-radius: 4px 4px 0 0;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tab-menu li a.active {
+	background: #ddd;
+}
+
+.tab-menu li a:not(.active):hover {
+	opacity: 0.5;
+	background: #ddd;
+	
+}
+
+.tab-content.active {
+	background: white;
+	min-height: 150px;
+	padding: 12px;
+	display: block;
+}
+
+.tab-content {
+	display: none;
+}
+
 .target-box {
 	padding: 10px;
 	margin: 32px auto;
@@ -116,7 +156,7 @@ li{
 @media (min-width: 900px) {
 	.my-page {
 		width: 800px;
-		margin: 44px auto;
+		margin: 0 auto;
 	}
 
 	.my-page .container {
@@ -126,6 +166,16 @@ li{
 	
 	.calender {
 		width: 50%;
+		margin: 0 0 65px;
+	}
+
+	.tab-container {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.tab-menu {
+		margin-bottom: 35px;
 	}
 
 	.target-box {

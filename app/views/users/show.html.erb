@@ -27,39 +27,51 @@
 		</div>
 	</div>
 
-	<%# ユーザーの投稿一覧 %>
-	<ul class='targets-list'>
-		<% @targets.each do |target|%>
-			<li>
-				<%= link_to target_path(target), class: 'target-link' do %>
-					<div class="target-box">
+	<%# タブメニュー %>
+	<div class="tab-container">
+    <ul class="tab-menu">
+      <li><a href="#" class="active" data-id="tab-target">目標一覧</a></li>
+      <li><a href="#" data-id="review">振り返り一覧</a></li>
+    </ul>
 
-						<div class="user-info">
-							<div class="user-image">
-								<% if @user.image.attached? %>
-									<%= image_tag @user.image.variant(resize: '50x50'), class: 'user-img' %>
-								<% else %>
-										<i class="fas fa-user-circle fa-3x"></i>
-								<% end %>
+		<%# タブコンテンツ：目標一覧 %>
+    <section class="tab-content active" id="tab-target">
+			<ul class='targets-list'>
+				<% @targets.each do |target|%>
+					<li>
+						<%= link_to target_path(target), class: 'target-link' do %>
+							<div class="target-box">
+								<div class="user-info">
+									<div class="user-image">
+										<% if @user.image.attached? %>
+											<%= image_tag @user.image.variant(resize: '50x50'), class: 'user-img' %>
+										<% else %>
+												<i class="fas fa-user-circle fa-3x"></i>
+										<% end %>
+									</div>
+									<div class="user-name">
+										<%= target.user.nickname %>
+									</div>
+								</div>
+								<div class="target-content">
+									<%= target.content %>
+								</div>
+								<div class="target-date">
+									<%= target.created_at.strftime("%H:%M  %Y/%m/%d") %>
+								</div>
 							</div>
-							
-							<div class="user-name">
-								<%= target.user.nickname %>
-							</div>
-						</div>
-						
-						<div class="target-content">
-							<%= target.content %>
-						</div>
-
-						<div class="target-date">
-							<%= target.created_at.strftime("%H:%M  %Y/%m/%d") %>
-						</div>
-						
-					</div>
+						<% end %>
+					</li>
 				<% end %>
-			</li>
-		<% end %>
-	</ul>
+			</ul>
+    </section>
 
+		<%# タブコンテンツ：振り返り一覧 %>
+    <section class="tab-content" id="review">
+      振り返り一覧。振り返り一覧。振り返り一覧。振り返り一覧。振り返り一覧。振り返り一覧。振り返り一覧。振り返り一覧。振り返り一覧。振り返り一覧。振り返り一覧。振り返り一覧。
+    </section>
+  </div>
+
+
+	
 </div>
