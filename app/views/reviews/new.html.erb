@@ -2,13 +2,13 @@
   <div class="container">
 
     <%= form_with model: @review, url:reviews_path, local: true do |f| %>
-      <div class="review-box">
+      <div class="review--box">
         <section class="achievement-box">
           <h1>きょう1日の振り返り</h1>
           <p>今日の目標は達成できましたか？</p>
           <%= f.collection_select(:achievement_id, Achievement.all, :id, :name, {}, {class:"achievement-select"}) %>
         </section>
-        <section class="review-content">
+        <section class="review--content">
           <p>なぜ達成できたのか？できなかったのか？</p>
           <p>振り返った内容を言葉にしましょう！</p>
           <%= f.text_area :text, class:"text", placeholder:"振り返った内容を記入しましょう！" %>
