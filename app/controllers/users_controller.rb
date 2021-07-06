@@ -14,7 +14,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @targets = @user.targets
+    @targets = @user.targets.order('created_at DESC')
+    @reviews = @user.reviews.order('created_at DESC')
   end
 
   private

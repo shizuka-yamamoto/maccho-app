@@ -31,14 +31,35 @@ li{
 	padding: 10px;
 }
 
+.user-menu {
+	text-align: left;
+	padding-left: 25px;
+}
+
 .my-profile .user-edit {
 	color: rgb(104, 100, 100);
 	font-size: 14px;
+	text-decoration: none;
 }
 
 .my-profile .user-edit:hover {
-	opacity: 0.7;
+	opacity: 0.5;
+	text-decoration: underline;
 }
+
+.my-profile .user-review {
+	color: rgb(104, 100, 100);
+	font-size: 14px;
+	display: inline-block;
+	margin-top: 20px;
+	text-decoration: none;
+}
+
+.my-profile .user-review:hover {
+	opacity: 0.5;
+	text-decoration: underline;
+}
+
 
 
 /* カレンダー */
@@ -78,9 +99,7 @@ li{
 .tab-menu {
 	display: flex;
 	border-bottom: 1px solid #ddd;
-	
 }
-
 
 .tab-menu li a {
 	width: 100px;
@@ -114,6 +133,13 @@ li{
 	display: none;
 }
 
+.target-link  {
+	display: block;
+	text-decoration: none;
+	color: #333;
+	height: 100%;
+}
+
 .target-box {
 	padding: 10px;
 	margin: 32px auto;
@@ -142,7 +168,7 @@ li{
 }
 
 .target-content {
-	padding: 8px;
+	padding-top: 8px;
 }
 
 .target-date {
@@ -152,6 +178,38 @@ li{
 	font-size: 12px;
 	width: 160px;
 }
+
+/* タブコンテンツ：振り返り一覧  */
+
+.review-box {
+	width: 100%;
+	padding-top: 10px;
+	margin: 32px auto;
+	height: 200px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+	font-size: 14px;
+	line-height: 1.6;
+	position: relative;
+}
+
+.review-box p {
+	border-bottom: 1px solid #ddd;
+}
+
+.review-content span {
+	font-weight: bold;
+	display: inline-block;
+}
+
+.review-date {
+	position: absolute;
+	bottom: 10px;
+	border-top: 1px solid #ddd;
+	font-size: 12px;
+	width: 160px;
+}
+
 
 @media (min-width: 900px) {
 	.my-page {
@@ -179,7 +237,12 @@ li{
 	}
 
 	.target-box {
-		margin: 0 auto;
+		margin: 35px auto;
+		width: 70%;
+	}
+
+	.review-box {
+		margin: 35px auto;
 		width: 70%;
 	}
 }
