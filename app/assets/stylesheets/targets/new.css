@@ -80,10 +80,6 @@
 
 	.new-target-box {
 		width: 380px;
-		box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
-		border-radius: 4px;
-		margin: 64px auto;
-		padding: 10px;
 	}
 	
 }

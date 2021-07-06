@@ -8,8 +8,15 @@
 			<% else %>
 				<i class="fas fa-user-circle user-image fa-8x"></i>
 			<% end %>
-			<div>
-				<%= link_to "アカウントの編集", edit_user_path(current_user), class: "user-edit" %>
+			<div class="user-menu">
+				<% if @user.id == current_user.id %>
+					<div>
+						<%= link_to "アカウントの編集", edit_user_path(current_user), class: "user-edit" %>
+					</div>
+					<div>
+						<%= link_to "一日を振り返る", new_review_path(current_user), class: "user-review"  %>
+					</div>
+				<% end %>
 			</div>
 		</div>
 
@@ -17,7 +24,7 @@
 		<div class="calender">
 			<%= month_calendar events: @targets do |date, targets| %>
 				<%= date.day %>
-				<%# 投稿した日は●印がつく %>
+				<%# 目標を投稿した日は●印がつく %>
 				<% targets.each do |target| %>
 					<div class="post-sign">
 						<%= "⚫︎" if target.present? %>
@@ -68,10 +75,22 @@
 
 		<%# タブコンテンツ：振り返り一覧 %>
     <section class="tab-content" id="review">
-      振り返り一覧。振り返り一覧。振り返り一覧。振り返り一覧。振り返り一覧。振り返り一覧。振り返り一覧。振り返り一覧。振り返り一覧。振り返り一覧。振り返り一覧。振り返り一覧。
+      <ul class='review-list'>
+				<% @reviews.each do |review|%>
+					<li>
+						<div class="review-box">
+							<div class="review-content">
+								<p>きょうの目標を<span>「<%= review.achievement.name %>」</span></p>
+							</div>
+								<%= review.text %>
+							<div class="review-date">
+								<%= review.created_at.strftime("%H:%M  %Y/%m/%d") %>
+							</div>
+						</div>
+					</li>
+				<% end %>
+			</ul>
     </section>
   </div>
 
-
-	
 </div>

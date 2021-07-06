@@ -40,7 +40,7 @@ header {
 }
 
 .pull-down--list{
-  padding: 20px;
+  padding: 15px 20px;
   border: 1px solid #ddd;
 }
 
@@ -117,7 +117,7 @@ header {
 
 #modal {
   background: #fff;
-  width: 400px;
+  width: 300px;
   padding: 20px;
   border-radius: 4px;
   position: absolute;
@@ -174,7 +174,7 @@ header {
 }
 
 .pull-down-list{
-  padding: 15px;
+  padding: 15px 20px;
   border: 1px solid #ddd;
 }
 

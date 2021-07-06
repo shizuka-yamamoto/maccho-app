@@ -102,11 +102,11 @@ body {
 	position: relative;
 }
 
-.target-link  {
+.target--link  {
 	display: block;
 	text-decoration: none;
 	color: #333;
-	height: 230px;
+	height: 100%;
 }
 
 .user--info {
