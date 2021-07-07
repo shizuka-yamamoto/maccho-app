@@ -1,53 +1,70 @@
-# テーブル設計
+# 🏋🏽‍♀️BUILDME💪
+1日の目標を立て振り返りを行うことで、自分自身を鍛えるためのサービスです。
 
-## users テーブル
+# 🌐App URL
+https://maccho-app.herokuapp.com/
 
-| Column             | Type   | Options     |
-| ------------------ | ------ | ----------- |
-| nickname           | string | null: false |
-| email              | string | null: false |
-| encrypted_password | string | null: false |
+ログイン情報（テスト用）
+* Eメール　: aaa@aaa
+* パスワード : a0a0a0
 
-### Association
+# 🏋🏽‍♀️BUILDMEについて
+### 登場人物
+何かしたいけど継続できない人
 
-- has_many :targets
-- has_many :reviews
-- has_many :comments
+### ユーザーが抱える課題
+* 目標がない（可視化されていない）から、だらだらとした時間を過ごしてしまう。
 
-## targets テーブル
+### 解決方法
+* 目標を立てるきっかけの提供
+* 目標の管理
+* 目標を立てれるようになる
 
-| Column   | Type       | Options                        |
-| -------- | ---------- | ------------------------------ |
-| text     | content    | null: false                    |
-| datetime | start_time | null: false                    |
-| user     | references | null: false, foreign_key: true |
+### 望む未来
+* 自分で目標を立て振り返りをおこない日々意味のある時間を過ごせるようになる
+* 自分が望むことを達成できる
+
+### サービスをつくった背景
+身近に「ダイエットしたいんだけどなかなか続かなくて」「何かスキルをとりたいんだけどなにをしたらいいのか・・」と、何かをやりたいけれど、実際に行動に移せていない友人が多くいました。
+そもそもの原因はなんだろう・・と考えたところ、なにかを達成するために「なにをするか？」という目標を具体的に言語化していないことに原因があると感じました。
 
 
-### Association
+### トップページ（投稿した目標の一覧を表示）
 
-- belongs_to :user
-- has_many :comments
+### 新規登録・ログイン画面
 
-## reviews テーブル
+### 目標を投稿するページ
 
-| Column      | Type       | Options                        |
-| ----------- | ---------- | ------------------------------ |
-| title       | string     | null: false                    |
-| text        | content    | null: false                    |
-| achievement | integer    | null: false                    |
-| user        | references | null: false, foreign_key: true |
+### 詳細表示画面
 
-- belongs_to :user
+### マイページ
 
-## comments テーブル
+### メモ書きページ
 
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
-| text   | text       | null: false                    |
-| user   | references | null: false, foreign_key: true |
-| target | references | null: false, foreign_key: true |
+# 工夫したポイント
 
-### Association
+# 使用技術(開発環境)
 
-- belongs_to :user
-- belongs_to :target
+## バックエンド
+Ruby, Ruby on Rails
+
+## フロントエンド
+JavaScript
+Ruby, Ruby on Rails
+
+## インフラ
+Heroku
+
+## ソース管理
+GitHub, GitHubDesktop
+
+##　テスト
+RSpec
+
+## エディタ
+VScode
+
+# 課題や今後実装したい機能
+
+
+# ER図
