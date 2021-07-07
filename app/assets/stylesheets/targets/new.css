@@ -1,5 +1,5 @@
 .target-post .container {
-	margin: 64px 32px;
+	padding: 64px 32px;
 	text-align: center;
 }
 
@@ -9,6 +9,7 @@
 	border-bottom: 1px solid #ddd;
 }
 
+/* タイマー */
 .timer-box {
 	background: white;
 	margin: 45px auto;
@@ -23,7 +24,8 @@
 	background: #ddd;
 	height: 120px;
 	line-height: 120px;
-	font-size: 40px;
+	font-size: 45px;
+	font-weight: bold;
 	color: #333;
 	margin-bottom: 15px;
 }
@@ -38,10 +40,11 @@
 	opacity: 0.7;
 }
 
-.target-post-top img {
+.meditation img {
 	width: 100px;
 }
 
+/* 目標投稿 */
 .new-target-box {
 	width: 300px;
 	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
@@ -53,7 +56,7 @@
 .new-target-box > h2 {
 	border-bottom: 1px solid #ddd;
 	font-size: 16px;
-	width: 50%;
+	width: 90%;
 	margin: 25px auto;
 }
 
@@ -62,14 +65,14 @@
 	font-size: 16px;
 }
 
-.target-post-bottom img {
+.new-target img {
 	width: 180px;
 }
 
 
 @media (min-width: 900px) {
 	.target-post .container {
-		margin: 64px auto;
+		margin: 0 auto;
 		width: 620px;
 	}
 	

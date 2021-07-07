@@ -1,27 +1,24 @@
 <div class="my-page">
 	<div class="container">
+
 		<%# プロフィール %>
-		<div class="my-profile">
-			<p><%= @user.nickname%>さんの投稿一覧</p>
+		<section class="my-profile">
+			<p><%= @user.nickname%>さんのマイページ</p>
 			<% if @user.image.attached? %>
 				<%= image_tag @user.image.variant(resize: '160x160'), class: 'user-image'  %>
 			<% else %>
 				<i class="fas fa-user-circle user-image fa-8x"></i>
 			<% end %>
-			<div class="user-menu">
+			<ul class="user-menu">
 				<% if @user.id == current_user.id %>
-					<div>
-						<%= link_to "アカウントの編集", edit_user_path(current_user), class: "user-edit" %>
-					</div>
-					<div>
-						<%= link_to "一日を振り返る", new_review_path(current_user), class: "user-review"  %>
-					</div>
+					<li><%= link_to "アカウントの編集", edit_user_path(current_user), class: "user-edit" %></li>
+					<li><%= link_to "一日を振り返る", new_review_path(current_user), class: "user-review"  %></li>
 				<% end %>
-			</div>
-		</div>
+			</ul>
+		</section>
 
-		<%# カレンダー表示 %>
-		<div class="calender">
+		<%# カレンダー %>
+		<section class="calender">
 			<%= month_calendar events: @targets do |date, targets| %>
 				<%= date.day %>
 				<%# 目標を投稿した日は●印がつく %>
@@ -31,7 +28,7 @@
 					</div>
 				<% end %>
 			<% end %>
-		</div>
+		</section>
 	</div>
 
 	<%# タブメニュー %>
@@ -43,7 +40,7 @@
 
 		<%# タブコンテンツ：目標一覧 %>
     <section class="tab-content active" id="tab-target">
-			<ul class='targets-list'>
+			<ul class='target-lists'>
 				<% @targets.each do |target|%>
 					<li>
 						<%= link_to target_path(target), class: 'target-link' do %>
@@ -75,14 +72,16 @@
 
 		<%# タブコンテンツ：振り返り一覧 %>
     <section class="tab-content" id="review">
-      <ul class='review-list'>
+      <ul class='review-lists'>
 				<% @reviews.each do |review|%>
 					<li>
 						<div class="review-box">
-							<div class="review-content">
+							<div class="review-title">
 								<p>きょうの目標を<span>「<%= review.achievement.name %>」</span></p>
 							</div>
+							<div class="review-content">
 								<%= review.text %>
+							</div>
 							<div class="review-date">
 								<%= review.created_at.strftime("%H:%M  %Y/%m/%d") %>
 							</div>

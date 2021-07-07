@@ -1,5 +1,5 @@
 .memo-writing .container{
-	margin: 64px 32px;
+	padding: 64px 32px;
 	text-align: center;
 }
 
@@ -7,12 +7,12 @@
 	border-bottom: solid 1px #ddd;
 	font-size: 18px;
 	line-height: 1.8;
-	margin: 20px auto;
+	margin: 15px auto;
 }
 
 .memo-writing img {
 	width: 80px;
-	margin: 35px auto 55px;
+	margin: 20px auto 40px;
 }
 
 .memo-writing p {
@@ -30,6 +30,7 @@
 opacity: 0.7;
 }
 
+/* メモ書きマニュアル */
 #memo-mask {
 	background: rgba(0, 0, 0, 0.4);
 	position: fixed;
@@ -59,27 +60,54 @@ opacity: 0.7;
 	text-align: left;
 }
 
-#memo-modal .title {
-	font-size: 18px;
+#memo-modal > h1 {
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#memo-modal h2 {
+	font-size: 16px;
+}
+
+#memo-modal p {
+	font-size: 14px;
 }
 
 #memo-modal li {
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 1.8;
+	list-style: none;
 }
 
-#memo-modal.hidden {
-	transform: translate(0, -1000px);
+#memo-modal .method {
+	padding: 10px;
 }
 
-#memo-modal img {
-	width: 300px;
-	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
-	margin: 20px auto;
+#memo-modal .effect {
+	padding: 10px;
+}
+
+#memo-modal .reference {
+	padding: 10px;
+}
+
+.fa-external-link-alt {
+	color: #333;
 }
 
 .fa-external-link-alt:hover {
 	opacity: 0.7;
+}
+
+#memo-modal img {
+	width: 100%;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+	margin: 10px auto;
+}
+
+#memo-modal.hidden {
+	transform: translate(0, -1000px);
 }
 
 #memo-close {
@@ -92,6 +120,7 @@ opacity: 0.7;
 	margin: 16px auto 0;
 }
 
+/* タイマー */
 .memo-timer-box {
 	margin: 45px auto ;
 	width: 300px;
@@ -105,7 +134,8 @@ opacity: 0.7;
 	background: #ddd;
 	height: 120px;
 	line-height: 120px;
-	font-size: 40px;
+	font-size: 45px;
+	font-weight: bold;
 	margin-bottom: 15px;
 }
 
@@ -134,26 +164,19 @@ opacity: 0.7;
 }
 
 @media (min-width: 900px) {
+	
 	.memo-writing .container{
-		margin: 64px auto;
+		margin: 0 auto;
 		width: 600px;
 	}
 	
 	.memo-writing h1 {
-		width: 500px;
-		margin: 35px auto;
+		width: 80%;
 	}
 
 	#memo-modal {
 		width: 600px;
+		padding: 40px;
 	}
 
-	.memo-img {
-		text-align: center;
-	}
-
-	#memo-modal img {
-		width: 550px;
-	}
-	
 }

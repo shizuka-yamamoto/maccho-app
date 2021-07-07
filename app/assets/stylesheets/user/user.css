@@ -1,6 +1,5 @@
 .account-page {
-  margin: 30px auto;
-  padding: 30px;
+  padding: 84px 32px;
 }
 
 .account-page .container {
@@ -102,7 +101,7 @@
 
 @media (min-width: 900px) {
   .account-page {
-    width: 600px;
-    margin: 64px auto;
+    width: 500px;
+    margin: 0 auto;
   }
 }

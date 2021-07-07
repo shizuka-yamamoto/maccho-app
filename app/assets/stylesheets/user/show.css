@@ -2,10 +2,7 @@
 	padding: 64px 32px;
 }
 
-li{
-	list-style: none;
-}
-
+/* プロフィール */
 .my-profile {
 	width: 200px;
 	text-align: center;
@@ -23,7 +20,7 @@ li{
 	border-bottom: 1px solid #ddd;
 }
 
-.fas {
+.fa-user-circle  {
 	color: rgb(104, 100, 100);
 }
 
@@ -34,6 +31,10 @@ li{
 .user-menu {
 	text-align: left;
 	padding-left: 25px;
+}
+
+.user-menu li {
+	list-style: none;
 }
 
 .my-profile .user-edit {
@@ -60,8 +61,6 @@ li{
 	text-decoration: underline;
 }
 
-
-
 /* カレンダー */
 .calender {
 	margin: 35px 0 55px;
@@ -77,11 +76,10 @@ li{
 .calendar-heading > a {
 	margin: 0 15px;
 	color: #333;
-	border-bottom: 1px solid #333;
 }
 
 .calendar-heading > a:hover {
-	opacity: 0.7;
+	opacity: 0.5;
 }
 
 .simple-calendar .day {
@@ -93,12 +91,14 @@ li{
 	color: orange;
 }
 
-/* カレンダー */
-
 /* タブメニュー */
 .tab-menu {
 	display: flex;
 	border-bottom: 1px solid #ddd;
+}
+
+.tab-menu li {
+	list-style: none;
 }
 
 .tab-menu li a {
@@ -119,9 +119,9 @@ li{
 .tab-menu li a:not(.active):hover {
 	opacity: 0.5;
 	background: #ddd;
-	
 }
 
+/* タブコンテンツ：目標一覧 */
 .tab-content.active {
 	background: white;
 	min-height: 150px;
@@ -131,6 +131,10 @@ li{
 
 .tab-content {
 	display: none;
+}
+
+.target-lists li {
+	list-style: none;
 }
 
 .target-link  {
@@ -143,7 +147,7 @@ li{
 .target-box {
 	padding: 10px;
 	margin: 32px auto;
-	height: 180px;
+	height: 200px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 	font-size: 14px;
@@ -155,7 +159,7 @@ li{
 	align-items: center;
 }
 
-.user-image  .user-img {
+.user-image .user-img {
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
@@ -176,10 +180,14 @@ li{
 	bottom: 10px;
 	border-top: 1px solid #ddd;
 	font-size: 12px;
-	width: 160px;
+	line-height: 1.4;
+	width: 140px;
 }
 
 /* タブコンテンツ：振り返り一覧  */
+.review-lists li {
+	list-style: none;
+}
 
 .review-box {
 	width: 100%;
@@ -195,11 +203,16 @@ li{
 
 .review-box p {
 	border-bottom: 1px solid #ddd;
+	margin-bottom: 10px;
 }
 
-.review-content span {
+.review-title span {
 	font-weight: bold;
 	display: inline-block;
+}
+
+.review-content {
+	padding: 10px;
 }
 
 .review-date {
@@ -207,7 +220,7 @@ li{
 	bottom: 10px;
 	border-top: 1px solid #ddd;
 	font-size: 12px;
-	width: 160px;
+	width: 140px;
 }
 
 
@@ -232,17 +245,11 @@ li{
 		margin: 0 auto;
 	}
 
-	.tab-menu {
-		margin-bottom: 35px;
-	}
-
 	.target-box {
-		margin: 35px auto;
 		width: 70%;
 	}
 
 	.review-box {
-		margin: 35px auto;
 		width: 70%;
 	}
 }

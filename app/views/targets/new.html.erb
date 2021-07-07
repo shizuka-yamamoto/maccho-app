@@ -2,7 +2,7 @@
   <div class="container">
     <h1>5分間の瞑想であたまの中を整理し、きょうの目標を立てましょう！</h1>
 
-    <div class="target-post-top">
+    <section class="meditation">
       <div class="timer-box">
         <div id="timer">05:00.000
             <div id="min"></div>
@@ -11,18 +11,19 @@
         <div id="start"><i class="far fa-play-circle fa-4x"></i></div>
       </div>
       <%= image_tag 'yoga.png' %>
-    </div>
+    </section>
 
-    <div class="target-post-bottom">
+    <section class="new-target">
       <div class="new-target-box">
-        <h2>きょう1日の目標</h2>
-        <%= form_with(model: @target, local: true) do |form| %>
-          <%= form.hidden_field :start_time, value:Time.now.strftime("%Y-%m-%d") %>
-          <%= form.text_area :content, placeholder: "今日の目標は何ですか？", rows: "10", class: 'text-content' %>
-          <%= form.submit '投稿する', class: "btn"%>
-        <% end %>
+        <h2>きょう1日の目標を立てましょう</h2>
+          <%= form_with(model: @target, local: true) do |form| %>
+            <%= form.hidden_field :start_time, value:Time.now.strftime("%Y-%m-%d") %>
+            <%= form.text_area :content, placeholder: "今日の目標は何ですか？", rows: "10", class: 'text-content' %>
+            <%= form.submit '投稿する', class: "btn"%>
+          <% end %>
       </div>
       <%= image_tag 'start.png' %>
-    </div>
+    </section>
+   
   </div>
 </div>

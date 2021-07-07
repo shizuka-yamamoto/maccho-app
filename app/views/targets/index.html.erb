@@ -2,10 +2,11 @@
 	<div class="container">
 		<div class="info">
 			<h1>きょうの目標をコトバにしよう！</h1>
-			<p>目標達成するためにサポートするアプリ</p>
+			<p>目標を立て、振り返りを行う<br>自分自身を鍛えるアプリ</p>
+
 			<div class="btn-box">
 				<% if user_signed_in? %>
-					<%= link_to("目標を宣言", new_target_path, {class: "btn"}) %>
+					<%= link_to("目標を宣言する", new_target_path, {class: "btn"}) %>
 				<% else %>
 					<%= link_to "新規登録", new_user_registration_path, class: "btn" %>
 				<% end %>
@@ -19,26 +20,26 @@
 
 <%# アプリの特徴 %>
 <section class="features">
-	<h1>BUILDMEの特徴</h1>
-
+	<h2>BUILDMEの特徴</h2>
 	<div class="container">
 		<section>
 			<div class="pic">
-				<%= image_tag 'meditation2.png' %>
+				<%= image_tag 'post.png' %>
 			</div>
 			<div class="info">
-				<h2>5分間の瞑想からスタート！</h2>
-				<p>目標を宣言する前に、5分間の瞑想から始めます。瞑想することで呼吸を整えて今に集中することで、頭の中が整理されます。5分間のカウントダウンタイマーが終わったら、今日の目標を宣言しましょう！</p>
+				<h3>今日の目標を立て、宣言しよう！</h3>
+				<p>目標宣言ページでは、今日1日の目標を立て、宣言(投稿)します。宣言した目標はトップページに公開されます。
+				また、目標をスムーズに立てられるように、5分間の瞑想から始めましょう。5分間のカウントダウンタイマーをご活用ください。</p>
 			</div>
 		</section>
 
 		<section>
 			<div class="pic">
-				<%= image_tag 'time.png' %>
+				<%= image_tag 'feedback.png' %>
 			</div>
 			<div class="info">
-				<h2>メモ書きでモヤモヤを吹っ飛ばそう！</h2>
-				<p>悩んで何も進まない時はメモ書きを始めましょう！用意するのは紙とペンだけ！タイマーをセットし、時間の限り描き続けましょう！</p>
+				<h3>今日1日の振り返りをしよう！</h3>
+				<p>マイページには振り返りを投稿する機能があります。今日の目標を達成できたのか？できなかったのか？ではそれを活かして明日はどうするか？今日1日の振り返り、明日へ繋げましょう。</p>
 			</div>
 		</section>
 
@@ -47,20 +48,19 @@
 				<%= image_tag 'finish.png' %>
 			</div>
 			<div class="info">
-				<h2>カレンダーを見たら一目瞭然</h2>
-				<p>マイページには今までの投稿記録と投稿に紐づいたカレンダーがあります。目標を投稿した日には、カレンダーに●印がつくので、目標を立てたかどうかは一目でわかります。</p>
+				<h3>他にもあなたを支える機能があります！</h3>
+				<p>「マイページ機能」で自己管理。目標宣言した日はカレンダーに●印が着くので一目瞭然。モヤモヤ悩んでしまった時には「メモ書き機能」をご活用ください。「コメント機能」を活用し、目標に向け頑張る人を応援しましょう！</p>
 			</div>
 		</section>
 	</div>
 </section>
 
 <%# 最近の投稿一覧 %>
-<section class="targets-wrapper">
-
-	<h1 class='title'>＼最近の投稿一覧／</h1>
+<section class="target-wrapper">
+	<h2 class='title'>＼最近投稿された目標一覧／</h2>
 	<p>コメントして応援することができます！</p>
 
-	<ul class='targets--list'>
+	<ul class='target--lists'>
 		<% @targets.each do |target|%>
 			<li>
 			<%= link_to target_path(target), class: 'target--link' do %>

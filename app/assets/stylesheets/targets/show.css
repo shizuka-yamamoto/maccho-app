@@ -4,7 +4,7 @@
 
 .target---box {
 	padding: 10px;
-	height: 230px;
+	height: 200px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 	font-size: 16px;
@@ -45,7 +45,7 @@
 }
 
 .menu---bar {
-	padding-right: 12px;
+	padding-right: 10px;
 	margin-left: auto;
 }
 
@@ -59,7 +59,7 @@
 }
 
 .target---content {
-	padding: 8px;
+	padding: 10px;
 }
 
 .target---date {
@@ -67,7 +67,7 @@
 	bottom: 10px;
 	border-top: 1px solid #ddd;
 	font-size: 12px;
-	width: 160px;
+	width: 140px;
 }
 
 .target-comment {
@@ -85,17 +85,17 @@
 }
 
 .comment-btn {
-		text-decoration: none;
-		cursor: pointer;
-		background: rgb(116, 159, 240);
-		color: aliceblue;
-		display: block;
-		width: 120px;
-		line-height: 28px;
-		margin: 15px auto 15px;
-		font-size: 14px;
-		border-radius: 10px;
-		border: none;
+	text-decoration: none;
+	cursor: pointer;
+	background: rgb(116, 159, 240);
+	color: aliceblue;
+	display: block;
+	width: 120px;
+	line-height: 28px;
+	margin: 15px auto 15px;
+	font-size: 14px;
+	border-radius: 10px;
+	border: none;
 }
 
 .comment-btn:hover {
@@ -104,10 +104,11 @@
 
 .comment-caution > p {
 	text-align: center;
+	margin-bottom: 20px;
 	color: red;
 }
 
-.comments ,h2 {
+.comments h2 {
 	font-size: 14px;
 	margin-bottom: 8px;
 }
@@ -126,7 +127,7 @@
 @media (min-width: 900px) {
 	.target-page {
 		width: 800px;
-		margin: 64px auto;
+		margin: 0 auto;
 	}
 
 	.target---box {

@@ -27,9 +27,9 @@ header {
   border-radius: 5px;
 }
 
-.training-lists{
+.training-lists {
   position: absolute;
-  left: 180px;
+  left: 120px;
   top: 50px;
   background-color: #fff;
   padding: 0;
@@ -37,6 +37,10 @@ header {
 
 .training-lists.hidden{
   display: none;
+}
+
+.training-lists li {
+ list-style: none;
 }
 
 .pull-down--list{
@@ -55,8 +59,8 @@ header {
   border-bottom: 1px solid #ddd;
 }
 
-.show-lists.hidden{
-  display: none;
+.nav-lists li {
+  list-style: none;
 }
 
 .nav-list {
@@ -84,8 +88,8 @@ header {
 
 .fa-question-circle {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 24px;
+  right: 15px;
   color: rgba(0, 0, 0, 0.54);
   cursor: pointer;
   margin-left: 8px;
@@ -165,12 +169,20 @@ header {
   border-radius: 5px;
 }
 
-.show-lists{
+.show-lists {
   position: absolute;
   right: 5px;
   top: 50px;
   background-color: #fff;
   padding: 0;
+}
+
+.show-lists.hidden{
+  display: none;
+}
+
+.show-lists li {
+  list-style: none;
 }
 
 .pull-down-list{
@@ -190,6 +202,7 @@ header {
 }
 
 @media (min-width: 900px) {
+
   .show-lists{
     position: absolute;
     right: 15%;
@@ -202,6 +215,10 @@ header {
     top: 50px;
     background-color: #fff;
     padding: 0;
+  }
+
+  #modal {
+    width: 400px;
   }
   
 }

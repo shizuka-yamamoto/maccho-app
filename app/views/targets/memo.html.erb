@@ -1,42 +1,43 @@
 <div class="memo-writing">
 	<div class="container">
 
-		<h1>モヤモヤは紙に書き出して、あたまの中を整理しよう！</h1>
+		<h1>モヤモヤしたら「メモ書き」をしよう！</h1>
 		<%= image_tag 'moya.png' %>
-		<div class="description">
-			<p>モヤモヤと悩んだ時は紙に書き出しましょう！</p>
-			<p>用意するのは「紙」と「ペン」だけ。</p>
-			<p>タイマーをセットして時間の限り書き続けましょう！</p>
-			<br>
-			<p>※詳しいメモ書き方法は<span id="memo-open">こちら</span></p>
-		</div>
+		<p>※詳しいメモ書き方法は<span id="memo-open">こちら</span></p>
 	
 		<%# メモ書きマニュアル %>
 		<div id="memo-mask" class="hidden"></div>
 		<section id="memo-modal" class="hidden">
-			<ul class="title">■メモ書きの方法
-				<li>・A4用紙とペンを用意する</li>
-				<li>・タイトルを書く</li>
-				<li>・日付を書く</li>
+			<h1>「メモ書き」について説明します</h1>
+			<ul class="method">
+				<h2>■メモ書きの方法</h2>
+				<li>・「A4用紙」と「ペン」を用意する</li>
+				<p>〜 ここからは下記の画像を参考に 〜</p>
+				<%= image_tag 'memo_manual.jpg' %>
+				<li>・「タイトル」と「日付」を書く</li>
 				<li>・1分間で思ったことを書く</li>
 				<li>・20〜30文字書く</li>
+				<li>・10枚書く</li>
 			</ul>
-			<div class="memo-img">
-				<%= image_tag 'memo_manual.jpg' %>
-			</div>
-			<ul class="title">■メモ書きの効能
+
+			<ul class="effect">
+				<h2>■メモ書きの効能</h2>
 				<li>・頭の中を整理できる</li>
 				<li>・深く考えられるようになる</li>
 				<li>・心のコントロールができるようになる</li>
 			</ul>
-			<p class="title">■参考書籍</p>
-				ゼロ秒思考 頭がよくなる世界一シンプルなトレーニング 
+
+			<ul class="reference">
+				<h2>■参考書籍</h2>
+				<li>ゼロ秒思考 頭がよくなる世界一シンプルなトレーニング 
 				<%= link_to ' https://www.amazon.co.jp/dp/447802099X/ref=cm_sw_em_r_mt_dp_V76F9R96AQDYPJSQ9DTK' do %>
   					<i class="fas fa-external-link-alt"></i>
-				<% end %>
+				<% end %></li>
+			</ul>
 			<div id="memo-close">閉じる</div>
 		</section>
 
+		<%# タイマー %>
 		<div class="memo-timer-box">
 			<div id="memo-timer">00:00:000</div>
 				<div class="memo-controls">
@@ -46,8 +47,10 @@
 					<div id="memo-start">Start</div>
 			</div>
 		</div>
+
 		<div class="memo-bottom">
 			<%= image_tag 'writing.png' %>
 		</div>
+
 	</div>
 </div>
