@@ -98,4 +98,6 @@ https://maccho-app.herokuapp.com/
 人の怠惰をサポートする機能(でもサポートしすぎないように・・・)
 
 # ER図
-
+<p align="left">
+  <img src="https://i.gyazo.com/a0562daa0d90cebfd91f96480f5ddce4.png" width=70%>  
+</p>　
