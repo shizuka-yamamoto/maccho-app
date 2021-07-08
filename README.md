@@ -8,10 +8,6 @@ https://maccho-app.herokuapp.com/
     * ID: macho
     * Pass: 5555
 
-  * テスト用アカウント
-    * Eメール　: aaa@aaa
-    * パスワード : a0a0a0
-
 # 🏋🏽‍♀️BUILDMEについて
 ### 登場人物
 * 目標を達成したい人
