@@ -41,37 +41,37 @@ https://maccho-app.herokuapp.com/
 ### トップページ（投稿した目標の一覧を表示）
 <p align="left">
   <img src="https://i.gyazo.com/d1883c12a4f624b7288873cceae8192d.gif" width=50%>  
-</p>　
+</p>
 
 ### 新規登録画面
 <p align="left">
   <img src="https://i.gyazo.com/66a35d21fc5239074d5054cab00a1450.png" width=50%>  
-</p>　
+</p>
 
 ### 目標を投稿するページ
 <p align="left">
   <img src="https://i.gyazo.com/bd696d51b948d22e25ab9022e0d4cff5.gif" width=50%>  
-</p>　
+</p>
 
 ### 目標の振り返りを投稿するページ
 <p align="left">
   <img src="https://i.gyazo.com/1baad4a587cc4334f3678b6c2021cce6.gif" width=50%>  
-</p>　
+</p>
 
 ### 詳細表示画面
 <p align="left">
   <img src="https://i.gyazo.com/6b920aa2282f9fae1d966595b77b635f.png" width=50%>  
-</p>　
+</p>
 
-### マイページ画面　
+### マイページ画面
 <p align="left">
   <img src="https://i.gyazo.com/6c26121cd314f77db5d8a4223a35b96c.gif" width=50%>  
-</p>　
+</p>
 
-### メモ書きページ　
+### メモ書きページ
 <p align="left">
   <img src="https://i.gyazo.com/65bddf979e82e58b4d825e3afb198610.gif" width=50%>  
-</p>　
+</p>
 
 # 工夫したポイント
 * デザイン
@@ -100,4 +100,4 @@ https://maccho-app.herokuapp.com/
 # ER図
 <p align="left">
   <img src="https://i.gyazo.com/a0562daa0d90cebfd91f96480f5ddce4.png" width=70%>  
-</p>　
+</p>
