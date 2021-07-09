@@ -9,6 +9,84 @@
 	border-bottom: 1px solid #ddd;
 }
 
+/* なぜ瞑想から？ */
+.target-post p {
+	margin-top: 20px;
+	font-size: 16px;
+}
+
+#medi-open {
+  color: #333;
+  cursor: pointer;
+}
+
+#medi-open:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+#medi-close {
+  cursor: pointer;
+  width: 100px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  padding: 8px 0;
+  margin: 20px auto 0;
+}
+
+#medi-mask {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#medi-modal {
+  background: #fff;
+  width: 300px;
+  padding: 25px;
+  border-radius: 4px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+	transition: transform 0.4s;
+  z-index: 2;
+	text-align: left;
+}
+
+#medi-mask.hidden {
+  display: none;
+}
+
+#medi-modal.hidden {
+  transform: translate(0, -500px);
+}
+
+.meditation-effect {
+	font-size: 16px;
+	line-height: 1.4;
+	list-style: none;
+}
+
+.meditation-effect > p {
+	width: 40%;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+#medi-modal p {
+	line-height: 1.2;
+}
+
+
 /* タイマー */
 .timer-box {
 	background: white;

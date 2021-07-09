@@ -1,7 +1,23 @@
 <div class="target-post">
   <div class="container">
     <h1>5分間の瞑想であたまの中を整理し、きょうの目標を立てましょう！</h1>
+    <%# なぜ瞑想から？ %>
+      <div id="medi-open">
+        <p><i class="fas fa-question"></i>  なぜ瞑想から始めるべきか</p>
+      </div>
+      <div id="medi-mask" class="hidden"></div>
+      <section id="medi-modal" class="hidden">
+        <ul class="meditation-effect">
+          <p>瞑想の効能</p>
+          <li>・集中力の向上</li>
+          <li>・ストレスの軽減</li>
+          <li>・自己コントロール力の強化 等</li>
+        </ul>
+        <p>瞑想することで上記のような効果を期待できます。<br>心がととのい、より明確な目標設定ができるでしょう。</p>
+        <div id="medi-close">閉じる</div>
+			</section>
 
+    <%# 瞑想タイマー %>
     <section class="meditation">
       <div class="timer-box">
         <div id="timer">05:00.000
@@ -15,10 +31,10 @@
 
     <section class="new-target">
       <div class="new-target-box">
-        <h2>きょう1日の目標を立てましょう</h2>
+        <h2>きょう１日の目標を立てましょう</h2>
           <%= form_with(model: @target, local: true) do |form| %>
             <%= form.hidden_field :start_time, value:Time.now.strftime("%Y-%m-%d") %>
-            <%= form.text_area :content, placeholder: "今日の目標は何ですか？", rows: "10", class: 'text-content' %>
+            <%= form.text_area :content, placeholder: "きょうの目標は何ですか？", rows: "10", class: 'text-content' %>
             <%= form.submit '投稿する', class: "btn"%>
           <% end %>
       </div>

@@ -4,8 +4,8 @@
     <%= form_with model: @review, url:reviews_path, local: true do |f| %>
       <div class="review--box">
         <section class="achievement-box">
-          <h1>きょう1日を振り返りましょう</h1>
-          <p>今日の目標は達成できましたか？</p>
+          <h1>きょう１日を振り返りましょう</h1>
+          <p>目標は達成できましたか？</p>
           <%= f.collection_select(:achievement_id, Achievement.all, :id, :name, {}, {class:"achievement-select"}) %>
         </section>
         <section class="review--content">
