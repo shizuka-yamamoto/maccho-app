@@ -39,7 +39,7 @@ RSpec.describe '目標の投稿', type: :system do
       expect(page).to have_content(@target.content)
     end
   end
-  context 'ツイート投稿ができないとき' do
+  context '目標投稿ができないとき' do
     it 'ログインしていないと新規投稿ページに遷移できない' do
       # トップページに遷移する
       visit root_path
