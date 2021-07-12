@@ -80,7 +80,7 @@
 								<p>きょうの目標を<span>「<%= review.achievement.name %>」</span></p>
 							</div>
 							<div class="review-content">
-								<%= review.text %>
+								<%= simple_format(h(review.text)) %>
 							</div>
 							<div class="review-date">
 								<%= review.created_at.strftime("%H:%M  %Y/%m/%d") %>

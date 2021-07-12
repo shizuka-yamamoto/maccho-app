@@ -201,7 +201,7 @@
 	position: relative;
 }
 
-.review-box p {
+.review-title > p {
 	border-bottom: 1px solid #ddd;
 	margin-bottom: 10px;
 }
