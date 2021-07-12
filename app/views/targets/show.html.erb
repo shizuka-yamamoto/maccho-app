@@ -24,7 +24,7 @@
 		</div>
 			
 		<div class="target---content">
-			<%= @target.content %>
+			<%= simple_format(h(@target.content)) %>
 		</div>
 
 		<div class="target---date">

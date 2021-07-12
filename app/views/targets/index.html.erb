@@ -52,7 +52,7 @@
 				<h3>他にもあなたを支える機能があります！</h3>
 				<p>⚫︎立てた目標を管理する「マイページ機能」<br>
 				⚫︎モヤモヤ解消のお手伝い「メモ書き機能」<br>
-				⚫︎目標達成に向けともに頑張る仲間をを応援する「コメント機能」<br>
+				⚫︎目標達成に向けともに頑張る仲間を応援する「コメント機能」<br>
 				ぜひ、こちらのサポート機能もご活用ください。</p>
 			</div>
 		</section>
@@ -85,7 +85,7 @@
 					</div>
 
 					<div class="target--content">
-						<%= target.content %>
+						<%= simple_format(h(target.content)) %>
 					</div>
 
 					<div class="target--date">
