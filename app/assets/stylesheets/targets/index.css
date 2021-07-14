@@ -147,6 +147,21 @@ body {
 	width: 140px;
 }
 
+.pagination {
+	margin-top: 40px;
+	text-align: center;
+}
+
+.pagination a {
+  border: none;
+  color: #333;
+}
+
+.pagination a:hover {
+opacity: 0.5;
+}
+
+
 @media (min-width: 900px) {
 
 		.top-wrapper .container {
