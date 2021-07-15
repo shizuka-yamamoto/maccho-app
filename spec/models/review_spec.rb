@@ -20,12 +20,12 @@ RSpec.describe Review, type: :model do
       it 'テキストが空では投稿できない' do
         @review.text = ''
         @review.valid?
-        expect(@review.errors.full_messages).to include("Textを入力してください")
+        expect(@review.errors.full_messages).to include('Textを入力してください')
       end
       it 'achievement_idがid:1では登録できない' do
         @review.achievement_id = 1
         @review.valid?
-        expect(@review.errors.full_messages).to include("Achievementは1以外の値にしてください")
+        expect(@review.errors.full_messages).to include('Achievementは1以外の値にしてください')
       end
       it 'ユーザーが紐付いていなければ投稿できない' do
         @review.user = nil

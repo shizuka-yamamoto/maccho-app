@@ -34,8 +34,6 @@ RSpec.describe '振り返りの投稿', type: :system do
       end.to change { Review.count }.by(1)
       # 投稿が完了するとマイページに遷移する
       visit user_path(@user)
-
     end
   end
 end
-
