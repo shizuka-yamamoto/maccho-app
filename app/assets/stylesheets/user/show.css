@@ -133,18 +133,18 @@
 	display: none;
 }
 
-.target-lists li {
+.tab-content .target-lists li {
 	list-style: none;
 }
 
-.target-link  {
+.tab-content .target-link {
 	display: block;
 	text-decoration: none;
 	color: #333;
 	height: 100%;
 }
 
-.target-box {
+.tab-content .target-box {
 	padding: 10px;
 	margin: 32px auto;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
@@ -153,12 +153,12 @@
 	line-height: 1.4;
 }
 
-.user-info {
+.tab-content .user-info {
 	display: flex;
 	align-items: center;
 }
 
-.user-image .user-img {
+.tab-content .user-image .user-img {
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
@@ -166,15 +166,15 @@
 	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
 }
 
-.user-name {
+.tab-content .user-name {
 	margin-left: 8px;
 }
 
-.target-content {
+.tab-content .target-content {
 	padding-top: 8px;
 }
 
-.target-date {
+.tab-content .target-date {
 	border-top: 1px solid #ddd;
 	margin-top: 8px;
 	font-size: 12px;
@@ -240,11 +240,11 @@
 		margin: 0 auto;
 	}
 
-	.target-box {
+	.tab-content .target-box {
 		width: 70%;
 	}
 
-	.target-content {
+	.tab-content .target-content {
 		height: 120px;
 		overflow: scroll;
 	}
