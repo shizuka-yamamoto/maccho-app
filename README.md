@@ -115,7 +115,7 @@ https://maccho-app.herokuapp.com/
 * RSpec
 * AWS
   * S3
-* Heroku
+  * EC2
 * GitHub
 * GitHubDesktop
 
