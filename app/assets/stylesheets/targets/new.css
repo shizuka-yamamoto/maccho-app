@@ -75,7 +75,6 @@
 }
 
 .meditation-effect > p {
-	width: 40%;
 	border-bottom: 1px solid #ddd;
 	text-align: center;
 	margin-bottom: 10px;
@@ -83,11 +82,11 @@
 }
 
 #medi-modal p {
-	line-height: 1.2;
+	line-height: 1.4;
 }
 
 
-/* タイマー */
+/* 瞑想タイマー */
 .timer-box {
 	background: white;
 	margin: 45px auto;
@@ -134,6 +133,7 @@
 .new-target-box > h2 {
 	border-bottom: 1px solid #ddd;
 	font-size: 16px;
+	line-height: 1.4;
 	width: 90%;
 	margin: 25px auto;
 }
