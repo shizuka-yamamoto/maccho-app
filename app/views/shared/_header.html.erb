@@ -4,17 +4,19 @@
 		<div>
 			<h1><%= link_to image_tag("logo.png"), root_path %></h1>
 		</div>
-		<div class="training-menu" id="training">
-			<p>メニュー</p>
-		</div>
+		<% if user_signed_in? %>
+			<div class="training-menu" id="training">
+				<p>メニュー</p>
+			</div>
+		<% end %>
 	</div>
 
 	<%# メニュー %>
-	<ul class="training-lists hidden" id="pull--down">
-		<li class="pull-down--list"><%= link_to "目標宣言", new_target_path, class: "pull-down--custom" %></li>
-		<li class="pull-down--list"><%= link_to "振り返り", new_review_path, class: "pull-down--custom" %></li>
-		<li class="pull-down--list"><%= link_to "メモ書き", memo_targets_path, class: "pull-down--custom" %></li>
-	</ul>
+		<ul class="training-lists hidden" id="pull--down">
+			<li class="pull-down--list"><%= link_to "目標宣言", new_target_path, class: "pull-down--custom" %></li>
+			<li class="pull-down--list"><%= link_to "振り返り", new_review_path, class: "pull-down--custom" %></li>
+			<li class="pull-down--list"><%= link_to "メモ書き", memo_targets_path, class: "pull-down--custom" %></li>
+		</ul>
 
 	<ul class="nav-lists">
 		<div class="nav-list">
