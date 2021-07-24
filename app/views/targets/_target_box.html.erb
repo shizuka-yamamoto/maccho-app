@@ -21,7 +21,9 @@
       </div>
 
       <div class="target-date">
-        <%= target.created_at.strftime("%H:%M  %Y/%m/%d") %>
+        <%= target.created_at.strftime("%Y/%m/%d  %H:%M") %>
+        <i class="far fa-comment"></i>
+        <%= target.comments.count %>
       </div>
     </div>
 

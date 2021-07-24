@@ -147,6 +147,10 @@ body {
 	width: 140px;
 }
 
+.fa-comment {
+	margin-left: 10px;
+}
+
 .pagination {
 	margin-top: 40px;
 	text-align: center;
