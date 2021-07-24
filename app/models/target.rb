@@ -1,5 +1,5 @@
 class Target < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, dependent: :destroy
   has_many :comments, dependent: :destroy
 
   validates :content, presence: true
