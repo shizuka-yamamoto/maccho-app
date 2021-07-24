@@ -12,7 +12,6 @@
 			<ul class="user-menu">
 				<% if @user.id == current_user.id %>
 					<li><%= link_to "アカウントの編集", edit_user_path(current_user), class: "user-edit" %></li>
-					<li><%= link_to "一日を振り返る", new_review_path(current_user), class: "user-review"  %></li>
 				<% end %>
 			</ul>
 		</section>
