@@ -7,7 +7,7 @@ RSpec.describe Target, type: :model do
 
   describe '投稿の保存' do
     context '投稿が保存できる場合' do
-      it 'テキストが入力されていれば投稿できる' do
+      it 'テキストが140文字以内で入力されていれば投稿できる' do
         expect(@target).to be_valid
       end
     end
@@ -17,6 +17,11 @@ RSpec.describe Target, type: :model do
         @target.content = ''
         @target.valid?
         expect(@target.errors.full_messages).to include('Contentを入力してください')
+      end
+      it 'テキストが140文字以上では投稿できない' do
+        @target.content = 'テストです' * 140
+        @target.valid?
+        expect(@target.errors.full_messages).to include('Contentは140文字以内で入力してください')
       end
       it 'ユーザーが紐付いていなければ投稿できない' do
         @target.user = nil
