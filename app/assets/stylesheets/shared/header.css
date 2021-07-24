@@ -64,6 +64,10 @@ header {
   list-style: none;
 }
 
+.fa-sort-down {
+  margin-left: 8px;
+}
+
 .nav-list {
   display: flex;
 }
